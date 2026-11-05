@@ -1,0 +1,34 @@
+{
+  "pipeline": {
+    "projectId": "fsg-production-handover",
+    "attemptId": "25c1429e-8ed3-4b17-9067-c6f3fcc6d114",
+    "requirements": [
+      {
+        "id": "REQ-1",
+        "statement": "核对培训与工序指引版本并转人工复核"
+      },
+      {
+        "id": "REQ-2",
+        "statement": "识别检查漏项、缺失和未确认状态"
+      },
+      {
+        "id": "REQ-3",
+        "statement": "只读输出具名交接清单、来源与执行轨迹"
+      }
+    ],
+    "solution": null,
+    "build": null,
+    "note": "本次方案的实现约定；现有Demo仍需逐项验证覆盖，绑定不代表功能或验收已经完成。"
+  },
+  "projectId": "fsg-production-handover",
+  "attemptId": "25c1429e-8ed3-4b17-9067-c6f3fcc6d114",
+  "modules": [
+    {
+      "id": "fsg-production-handover",
+      "title": "生产岗位培训与工序交接",
+      "company": "上海外服（集团）有限公司"
+    }
+  ],
+  "trainingHref": "/group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114",
+  "assignment": "FDE课堂作业2"
+}

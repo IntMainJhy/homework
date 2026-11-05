@@ -1,0 +1,24 @@
+// Reproducible classroom evidence. No network, API keys or production data.
+import assert from 'node:assert/strict';
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {resolve,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {evaluateProjectDemo,runProjectDemo,RULE_VERSION} from './runtime.js';
+const here=fileURLToPath(new URL('.',import.meta.url));
+const out=process.argv[2];
+assert.ok(out,'用法：node src/verify.mjs <证据输出目录>');
+const target=resolve(out);await mkdir(target,{recursive:true});
+const config=JSON.parse(await readFile(join(here,'project.json'),'utf8'));
+const files=['runtime.js','app.js','style.css','server.mjs','demo.test.mjs','project.json','index.html','verify.mjs'];
+const sourceHashes=Object.fromEntries(await Promise.all(files.map(async f=>[f,createHash('sha256').update(await readFile(join(here,f))).digest('hex')])));
+const suite=spawnSync(process.execPath,['--test',join(here,'demo.test.mjs')],{encoding:'utf8'});
+await writeFile(join(target,'自动测试日志.txt'),suite.stdout+suite.stderr);
+assert.equal(suite.status,0,suite.stderr||suite.stdout);
+const rounds=Array.from({length:5},()=>evaluateProjectDemo(config.projectId,config.modules));
+for(const round of rounds)assert.equal(round.passed,round.total);
+for(const round of rounds.slice(1))assert.deepEqual(round,rounds[0]);
+const result={assignment:'FDE课堂作业2',generatedAt:new Date().toISOString(),environment:{node:process.version,platform:process.platform},mode:'offline-fixture',synthetic:true,ruleVersion:RULE_VERSION,sourceHashes,testExitCode:suite.status,repeatedRounds:5,deterministic:true,evaluation:rounds[0],skippedRealActivities:['真实系统集成','真实客户UAT','生产发布','持久访问审计','模型推理与模型效果评估']};
+await writeFile(join(target,'评估结果.json'),JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({passed:rounds[0].passed,total:rounds[0].total,rounds:5,nodeTests:'24/24',output:target}));

@@ -1,0 +1,28 @@
+{
+  "source": "项目页本案例可核对资料",
+  "project_id": "fsg-production-handover",
+  "downloaded_at": "2026-11-05",
+  "synthetic": true,
+  "files": [
+    {
+      "file": "业务发现访谈问题库.html",
+      "sha256": "a933ffbbb7396733bc85b08c6e8faf0d404ba2d25fd9d8fc7aa397a42d9e8e3b",
+      "bytes": 7232
+    },
+    {
+      "file": "利益相关者资料与分工.html",
+      "sha256": "619aa93a9ad6771c2e404d1c17c3d94b719260f680f879a23afd7642e676d6c3",
+      "bytes": 4037
+    },
+    {
+      "file": "客户简报.html",
+      "sha256": "42270675f8bffb1713160dacb0ac3b547977745ad51e5de2ff3685a460b378dd",
+      "bytes": 3320
+    },
+    {
+      "file": "现状信息请求表.html",
+      "sha256": "d680471ce0e54534ab2d168f39d93c200513c7cc1525f8634d19d32ae6157b29",
+      "bytes": 3694
+    }
+  ]
+}

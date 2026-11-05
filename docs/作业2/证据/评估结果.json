@@ -1,0 +1,1094 @@
+{
+  "assignment": "FDE课堂作业2",
+  "generatedAt": "2026-11-05T05:59:02.656Z",
+  "environment": {
+    "node": "v24.18.0",
+    "platform": "darwin"
+  },
+  "mode": "offline-fixture",
+  "synthetic": true,
+  "ruleVersion": "handover-rules-v2",
+  "sourceHashes": {
+    "runtime.js": "44b71a1018f8a5076487432f043c3b6d73a6713d4a90dc6b2006f27e0e83c80d",
+    "app.js": "1baf4ae56646c985d011d95cb99e8c31f3a91f1abf14dc4e030edb011a526e00",
+    "style.css": "4c8bd3f7b6bb99600b2aaf4ffbbaa14383c03df610273c383552196afdbf0c83",
+    "server.mjs": "be767d2d5d172c241312895579cca4e748bd2838fbb350e684e8ead51bb1cd91",
+    "demo.test.mjs": "0de951d53e6ecec9c21058b5b0e623a5d1a5d3fdc41482c7d34e1369d0e075f5",
+    "project.json": "d5a121ac44b7187c591a82db9c409db91cf0e84bb48ca1b5c917b2b78ee6c5e5",
+    "index.html": "dbdf8b2c2ad9ff232a27f7341f57b15b1a80ec9a1797fdea9d45518ce7576c00",
+    "verify.mjs": "5e72049d4a02c24cb41051224499a5f40acd84318c46a4943a1b46c5fcc017b4"
+  },
+  "testExitCode": 0,
+  "repeatedRounds": 5,
+  "deterministic": true,
+  "evaluation": {
+    "mode": "offline-fixture",
+    "ruleVersion": "handover-rules-v2",
+    "total": 17,
+    "passed": 17,
+    "cases": [
+      {
+        "id": "normal",
+        "label": "正常交接",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "normal"
+        },
+        "expected": "review",
+        "actual": "review",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "review",
+          "title": "交接核对草稿，待人工复核",
+          "summary": "教学规则已执行；规则通过不代表真实培训合格或生产放行。",
+          "details": [
+            "岗位 JOB-01；工序 PROC-02；批次 BATCH-DEMO-01",
+            "培训与工序指引均为 v2；已按演示确认状态核对",
+            "必查项 C01、C02 均有记录；未结异常 0 项",
+            "交出人：现场专员（演示）；接收人：质量复核员（演示）",
+            "下一步：人工核对原始证据、签署复核记录，再按既有流程处理。"
+          ],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            },
+            {
+              "step": 3,
+              "agent": "版本与完整性核对",
+              "action": "完成确定性核对",
+              "detail": "版本相等、检查项齐全、确认状态明确、接收人存在、异常无未结项。"
+            },
+            {
+              "step": 4,
+              "agent": "人工交接草稿",
+              "action": "生成复核草稿",
+              "detail": "引用来源版本与采集时间，不修改原始资料。"
+            },
+            {
+              "step": 5,
+              "agent": "人工复核关卡",
+              "action": "等待人工决定",
+              "detail": "仅用合成资料只读核对；不控制设备、不替代安全培训、不批准生产放行。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "missing",
+        "label": "接收人缺失",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "missing"
+        },
+        "expected": "needs-info",
+        "actual": "needs-info",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "needs-info",
+          "title": "交接资料不完整",
+          "summary": "保留原始记录，补齐后重新核对。",
+          "details": [
+            "接收人缺失"
+          ],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            },
+            {
+              "step": 3,
+              "agent": "版本与完整性核对",
+              "action": "发现缺项",
+              "detail": "接收人缺失"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "conflict",
+        "label": "培训版本冲突",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "conflict"
+        },
+        "expected": "manual",
+        "actual": "manual",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "manual",
+          "title": "培训版本与指引不一致",
+          "summary": "由资料负责人确认适用版本与补训范围，质量负责人复核；不自动认定责任。",
+          "details": [
+            "培训：v1",
+            "工序指引：v2"
+          ],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v1\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v1",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            },
+            {
+              "step": 3,
+              "agent": "版本与完整性核对",
+              "action": "发现版本冲突",
+              "detail": "v1 ≠ v2"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "unconfirmed",
+        "label": "培训尚未确认",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "unconfirmed"
+        },
+        "expected": "manual",
+        "actual": "manual",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "manual",
+          "title": "培训状态尚未确认",
+          "summary": "记录存在但未经人工确认，不能当作培训缺失或已完成。",
+          "details": [],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"unconfirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "unconfirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "missing-item",
+        "label": "检查项漏记",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "missing-item"
+        },
+        "expected": "needs-info",
+        "actual": "needs-info",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "needs-info",
+          "title": "交接资料不完整",
+          "summary": "保留原始记录，补齐后重新核对。",
+          "details": [
+            "检查项未记录：C02"
+          ],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            },
+            {
+              "step": 3,
+              "agent": "版本与完整性核对",
+              "action": "发现缺项",
+              "detail": "检查项未记录：C02"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "open-exception",
+        "label": "异常未关闭",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "open-exception"
+        },
+        "expected": "manual",
+        "actual": "manual",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "manual",
+          "title": "存在未结异常",
+          "summary": "保留异常责任人和状态，转质量负责人复核。",
+          "details": [
+            "EX-DEMO-001 / 现场专员（演示） / open"
+          ],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[{\"id\":\"EX-DEMO-001\",\"status\":\"open\",\"owner\":\"现场专员（演示）\"}],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [
+                  {
+                    "id": "EX-DEMO-001",
+                    "status": "open",
+                    "owner": "现场专员（演示）"
+                  }
+                ],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "invalid-rule",
+        "label": "指引未生效",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "invalid-rule"
+        },
+        "expected": "manual",
+        "actual": "manual",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "manual",
+          "title": "指引未确认或不在有效期",
+          "summary": "有效期与人工确认状态必须同时满足；请资料负责人核实，不能凭文件名判断。",
+          "details": [],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-05T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"unconfirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "unconfirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-05T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "stale",
+        "label": "来源已过期",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "stale"
+        },
+        "expected": "manual",
+        "actual": "manual",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "manual",
+          "title": "来源过期，需要人工核对",
+          "summary": "教学时效阈值60分钟；不得用历史快照证明当前状态。",
+          "details": [],
+          "sources": [
+            {
+              "id": "HND-DEMO-001@snapshot-v2",
+              "title": "岗位作业交接包合成快照",
+              "location": "runtime.js#fixture",
+              "version": "snapshot-v2",
+              "capturedAt": "2026-11-04T09:00:00+08:00",
+              "synthetic": true,
+              "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-04T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+              "snapshot": {
+                "id": "HND-DEMO-001",
+                "job": "JOB-01",
+                "process": "PROC-02",
+                "batch": "BATCH-DEMO-01",
+                "instructionVersion": "v2",
+                "instructionState": "confirmed",
+                "validFrom": "2026-11-01T00:00:00+08:00",
+                "validTo": "2026-12-01T00:00:00+08:00",
+                "trainingVersion": "v2",
+                "trainingState": "confirmed",
+                "requiredItems": [
+                  "C01",
+                  "C02"
+                ],
+                "completedItems": [
+                  "C01",
+                  "C02"
+                ],
+                "owner": "现场专员（演示）",
+                "receiver": "质量复核员（演示）",
+                "exceptions": [],
+                "sourceVersion": "snapshot-v2",
+                "capturedAt": "2026-11-04T09:00:00+08:00",
+                "reviewedAt": "2026-11-05T09:05:00+08:00",
+                "maxAgeMinutes": 60
+              }
+            }
+          ],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "读取合成快照",
+              "detail": "HND-DEMO-001@snapshot-v2；2026-11-04T09:00:00+08:00"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "unauthorized",
+        "label": "身份无权限",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "unauthorized"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "访问被拒绝",
+          "summary": "未读取业务来源；请使用授权演示身份。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "outage",
+        "label": "来源不可用",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "outage"
+        },
+        "expected": "degraded",
+        "actual": "degraded",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "degraded",
+          "title": "来源不可用，转人工",
+          "summary": "历史快照采集时间：2026-11-05T09:00:00+08:00；其有效性未获重新确认。请人工核查，恢复后重新读取。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "版本与完整性核对",
+              "action": "来源读取失败",
+              "detail": "未把历史快照当作当前状态；历史预览仍标注采集时间。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "injection",
+        "label": "越界动作请求",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "scenario": "injection"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "请求超出只读范围",
+          "summary": "请由授权人员在既有流程中处理。系统没有业务写入或执行接口。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            },
+            {
+              "step": 2,
+              "agent": "动作边界",
+              "action": "拒绝执行动作",
+              "detail": "仅用合成资料只读核对；不控制设备、不替代安全培训、不批准生产放行。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "unknown-record",
+        "label": "unknown-record",
+        "input": {
+          "identity": "operator",
+          "recordId": "OTHER",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "OTHER",
+          "status": "blocked",
+          "title": "样本不存在",
+          "summary": "仅允许读取本项目的合成交接包。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "module-boundary",
+        "label": "module-boundary",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "OTHER",
+          "mode": "offline"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "模块不在本次训练范围",
+          "summary": "未读取其他模块的记录。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "invalid-identity",
+        "label": "invalid-identity",
+        "input": {
+          "identity": "admin",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "访问被拒绝",
+          "summary": "未读取业务来源；请使用授权演示身份。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "unknown-field",
+        "label": "unknown-field",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "approve": true
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "输入字段未定义",
+          "summary": "请按数据契约提交，未知字段不会被执行。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "bad-items",
+        "label": "bad-items",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "completedItems": "C01"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "字段不符合契约",
+          "summary": "请检查培训版本、确认状态、检查项数组与接收人。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      },
+      {
+        "id": "bad-state",
+        "label": "bad-state",
+        "input": {
+          "identity": "operator",
+          "recordId": "HND-DEMO-001",
+          "moduleId": "fsg-production-handover",
+          "mode": "offline",
+          "trainingState": "done"
+        },
+        "expected": "blocked",
+        "actual": "blocked",
+        "output": {
+          "projectId": "fsg-production-handover",
+          "recordId": "HND-DEMO-001",
+          "status": "blocked",
+          "title": "字段不符合契约",
+          "summary": "请检查培训版本、确认状态、检查项数组与接收人。",
+          "details": [],
+          "sources": [],
+          "trace": [
+            {
+              "step": 1,
+              "agent": "范围与身份核对",
+              "action": "校验输入契约",
+              "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+            }
+          ],
+          "mode": "offline-fixture",
+          "ruleVersion": "handover-rules-v2",
+          "writes": 0,
+          "externalSends": 0,
+          "approval": "未获人工批准",
+          "moduleId": "fsg-production-handover",
+          "reviewOwner": "质量复核负责人（待具名授权）"
+        },
+        "passed": true
+      }
+    ]
+  },
+  "skippedRealActivities": [
+    "真实系统集成",
+    "真实客户UAT",
+    "生产发布",
+    "持久访问审计",
+    "模型推理与模型效果评估"
+  ]
+}

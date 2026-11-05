@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1650" viewBox="0 0 1560 1650">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#315a68"/></marker><marker id="red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#a34b35"/></marker></defs><rect width="100%" height="100%" fill="#f5f8fa"/><style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#203e49}.title{font-size:32px;font-weight:650}.sub{font-size:17px;fill:#526b76}.node{font-size:21px;font-weight:600}.meta{font-size:16px;fill:#526b76}.warn{fill:#93422e}.line{fill:none;stroke:#315a68;stroke-width:2;marker-end:url(#arrow)}.err{fill:none;stroke:#a34b35;stroke-width:2;marker-end:url(#red)}</style>
+<text x="52" y="64" class="title">生产岗位培训与工序交接：现状流程图</text>
+<text x="52" y="102" class="sub">FDE课堂作业2  |  六角色模拟访谈还原  |  2026-11-05</text>
+<text x="52" y="137" class="sub">矩形＝执行/记录；菱形＝人工判断；红色＝异常路径。图为现状分析，不是自动化后的目标流程。</text>
+<rect x="70" y="195" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="228" class="node">1 任务确认</text>
+<text x="90" y="256" class="meta">顾明岚 / 业务角色；具体发起单待补  ·  f01、f04</text>
+<rect x="70" y="315" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="348" class="node">2 定位培训记录与工序指引</text>
+<text x="90" y="376" class="meta">林亦舟；文件入口与维护者待核实  ·  f10、f21、f30</text>
+<polygon points="415,436.0 760.0,494 415,552.0 70.0,494" fill="#e6f0f5" stroke="#6a97ad"/>
+<text x="249" y="476" class="node">3 版本是否有效且已确认？</text>
+<text x="249" y="502" class="meta">唐映秋核对；不得按文件名猜新版 · f24、f25</text>
+<rect x="70" y="580" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="613" class="node">4 核对培训确认</text>
+<text x="90" y="641" class="meta">林亦舟 / 当班人员；缺失与未确认分开  ·  f14、f31</text>
+<rect x="70" y="700" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="733" class="node">5 按工序清单记录检查项</text>
+<text x="90" y="761" class="meta">现场执行；夜班旧清单漏新增复核项为已披露模拟异常  ·  f11</text>
+<rect x="70" y="820" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="853" class="node">6 整理岗位作业交接包</text>
+<text x="90" y="881" class="meta">唐映秋；版本、接收人、未结项、截止时间  ·  f20、f23</text>
+<rect x="70" y="940" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="973" class="node">7 异常沟通与事后回填</text>
+<text x="90" y="1001" class="meta">林亦舟；群消息先行，回填时间不等于发生时间  ·  f13、f34</text>
+<rect x="70" y="1060" width="690" height="88" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="1093" class="node">8 登记异常责任与确认链</text>
+<text x="90" y="1121" class="meta">唐映秋 / 资料负责人；未确认项不能算给对方  ·  f25</text>
+<polygon points="415,1186.0 760.0,1244 415,1302.0 70.0,1244" fill="#e6f0f5" stroke="#6a97ad"/>
+<text x="249" y="1226" class="node">9 质量复核能否确认？</text>
+<text x="249" y="1252" class="meta">傅景 / 授权人员；核版本、来源、异常 · f41、f42</text>
+<rect x="70" y="1350" width="690" height="110" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="90" y="1383" class="node">10 交接双方核对、接收与反馈</text>
+<text x="90" y="1411" class="meta">接收方 / 叶书；核数量、状态、截止时间，投诉保留原问题</text>
+<text x="90" y="1436" class="meta">按周复盘误报、漏报、未确认项  ·  f53、f54、f55</text>
+<path d="M415,283 L415,307" class="line"/>
+<path d="M415,403 L415,432" class="line"/>
+<path d="M415,552 L415,572" class="line"/>
+<text x="432" y="574" class="meta">可确认</text>
+<path d="M415,668 L415,692" class="line"/>
+<path d="M415,788 L415,812" class="line"/>
+<path d="M415,908 L415,932" class="line"/>
+<path d="M415,1028 L415,1052" class="line"/>
+<path d="M415,1148 L415,1182" class="line"/>
+<path d="M415,1302 L415,1342" class="line"/>
+<text x="432" y="1324" class="meta">可确认</text>
+<rect x="880" y="210" width="610" height="140" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="900" y="243" class="node">系统与材料背景（秦芮）</text>
+<text x="900" y="271" class="meta">内部服务台、业务台账、文件库；尚无统一关联编号（f30）</text>
+<text x="900" y="296" class="meta">字段含岗位、工序、版本、培训、异常与复核人（f31）</text>
+<text x="900" y="321" class="meta">只提供脱敏只读导出；真实接口与授权待确认（f32）</text>
+<rect x="880" y="405" width="610" height="145" rx="12" fill="#fff2ec" stroke="#d6ac9e"/>
+<text x="900" y="438" class="node warn">异常A：版本不明、资料缺失或冲突</text>
+<text x="900" y="466" class="meta">保留原版、作废原因、未结项与责任人（f24/f25）</text>
+<text x="900" y="491" class="meta">资料负责人补证，质量人员复核；不能默认通过（f44）</text>
+<text x="900" y="516" class="meta">最终接手人与实际审批单据待核实</text>
+<path d="M760,494 L865,494" class="err"/>
+<text x="790" y="477" class="meta warn">不明</text>
+<path d="M1490,478 L1520,478 L1520,1104 L775,1104" class="err"/>
+<text x="1200" y="808" class="meta warn">登记后转人工</text>
+<rect x="880" y="630" width="610" height="145" rx="12" fill="#fff2ec" stroke="#d6ac9e"/>
+<text x="900" y="663" class="node warn">异常B：漏项、旧清单或培训未确认</text>
+<text x="900" y="691" class="meta">复核原始指引版本与检查项；关键字段由当班人员核实</text>
+<text x="900" y="716" class="meta">系统建议不能覆盖原值或省略确认（f11/f14）</text>
+<text x="900" y="741" class="meta">异常仍未关闭时保留责任人与状态（f42）</text>
+<path d="M760,744 L865,704" class="err"/>
+<path d="M1490,704 L1520,704" class="err"/>
+<rect x="880" y="855" width="610" height="140" rx="12" fill="#fff" stroke="#b9ced7"/>
+<text x="900" y="888" class="node">时间与证据断点</text>
+<text x="900" y="916" class="meta">业务发生、系统接收与表格回填时间分别保留（f13/f34）</text>
+<text x="900" y="941" class="meta">错误地用补填时间排序，会影响事件还原与指标口径</text>
+<text x="900" y="966" class="meta">原单、版本修订日志、样本日期与实际损失仍待补</text>
+<rect x="880" y="1170" width="610" height="138" rx="12" fill="#fff2ec" stroke="#d6ac9e"/>
+<text x="900" y="1203" class="node warn">异常C：复核不能确认 / 来源不可用</text>
+<text x="900" y="1231" class="meta">进入人工队列，必要时暂停，不形成正式结论（f44）</text>
+<text x="900" y="1256" class="meta">保留旧快照并标时间，恢复后重新核对（f35）</text>
+<text x="900" y="1281" class="meta">缺源、越权和未复核异常不以“已完成”放行</text>
+<path d="M760,1244 L865,1244" class="err"/>
+<text x="790" y="1225" class="meta warn">否</text>
+<path d="M1490,1244 L1540,1244 L1540,1104 L775,1104" class="err"/>
+<text x="880" y="1358" class="meta warn">红色回路表示补证/人工复核，不是自动重试或批准。</text>
+<text x="880" y="1410" class="node">当前证据边界</text>
+<text x="880" y="1443" class="meta">六角色陈述与虚构样本；未开展真实工厂观察。</text>
+<text x="880" y="1475" class="meta">流程主链来自f01/f20；10步为分析性展开。</text>
+<text x="70" y="1530" class="sub">完整依据：docs/作业2/调研记录.md、现场调研分析.md；事实全称为 fsg-production-handover-fXX。</text>
+<text x="70" y="1570" class="sub">不控制真实设备、不替代安全培训、不批准生产放行；实际操作与签字仍依原有授权流程。</text>
+</svg>

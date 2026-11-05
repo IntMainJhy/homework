@@ -1,0 +1,2095 @@
+{
+  "title": "上海外服（集团）有限公司 · 业务需求发现报告",
+  "generatedAt": "2026-11-05T05:46:53.723Z",
+  "library": "fsg",
+  "publicSources": [
+    {
+      "title": "上海外服 · 公司概况与五类主营业务",
+      "url": "https://www.fsg.com.cn/AboutUs_Profile.html"
+    },
+    {
+      "title": "上海外服 · 数字化服务介绍",
+      "url": "https://www.fsg.com.cn/AboutUs_Profile_Digitization.html"
+    },
+    {
+      "title": "上海外服 · 业务外包服务",
+      "url": "https://www.fsg.com.cn/Product_BPO.html"
+    },
+    {
+      "title": "上海外服 · 零售终端外包服务",
+      "url": "https://www.fsg.com.cn/Product_BPO_Retail.html"
+    }
+  ],
+  "checkedAt": "2026-10-03",
+  "case": "生产岗位培训与工序交接",
+  "industry": "业务外包",
+  "opening": "【合成演练】培训版本与工序指引不一致，交接单只写已完成。请访谈业务、现场、交接、技术、质量与客户六个视角，核实具体问题、证据与试点范围。",
+  "coverage": {
+    "found": 35,
+    "total": 36,
+    "percent": 97
+  },
+  "note": "本报告基于合成场景访谈；需求为待验证假设。采集完整不等于真实业务需求已确认。",
+  "requirements": [
+    {
+      "title": "岗位作业交接包的价值与试点范围",
+      "owner": "服务业务负责人",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f00",
+          "source": "业务外包-001 · 访谈事实记录",
+          "text": "这次目标是让岗位作业交接包减少重复核对，必须保留人工确认和可追溯来源。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "fsg-production-handover-f01",
+          "source": "业务外包-002 · 业务事件样本",
+          "text": "实际链路是任务确认→培训记录→工序交接→异常回报→质量复核；先观察每个交接点，而不是直接增加自动化。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "fsg-production-handover-f04",
+          "source": "业务外包-020 · 协作规则记录",
+          "text": "业务负责人决定试点范围，审核与质量负责人保留停止试点的权利，客户协同代表确认结果用途。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "fsg-production-handover-f05",
+          "source": "业务外包-021 · 验证与反馈记录",
+          "text": "试点只覆盖一个批次的岗位作业交接包；不控制真实设备、不代替安全培训或批准生产放行。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "fsg-production-handover-f02",
+          "source": "业务外包-003 · 流程与约束说明",
+          "text": "演练试点验收：50次交接全部匹配指引版本，未复核异常保留责任人与状态。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "fsg-production-handover-f03",
+          "source": "业务外包-019 · 执行条件记录",
+          "text": "预算先限定为四周试点、两名业务骨干参与，每周投入不超过四小时，超出须重新评估。",
+          "character": "顾明岚"
+        }
+      ],
+      "acceptance": "演练试点验收：50次交接全部匹配指引版本，未复核异常保留责任人与状态。"
+    },
+    {
+      "title": "岗位作业交接包的异常识别与人工复核",
+      "owner": "外包现场专员",
+      "status": "证据待补充",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f10",
+          "source": "业务外包-004 · 访谈事实记录",
+          "text": "现场的具体困难是培训版本与工序指引不一致，交接单只写已完成；需记录发生节点和受影响对象。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "fsg-production-handover-f11",
+          "source": "业务外包-005 · 业务事件样本",
+          "text": "最近一个模拟异常：工序检查项新增后，夜班仍使用旧清单并漏记一项复核，需查原始版本后判断责任。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "fsg-production-handover-f13",
+          "source": "业务外包-022 · 执行条件记录",
+          "text": "现场同事习惯先用群消息解决岗位作业交接包的问题，再补填表格，因此回填时间不能当作发生时间。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "fsg-production-handover-f14",
+          "source": "业务外包-023 · 协作规则记录",
+          "text": "正式闭环前由当班人员核对岗位作业交接包的关键字段；系统建议不能覆盖原值或省略确认。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "fsg-production-handover-f12",
+          "source": "业务外包-006 · 流程与约束说明",
+          "text": "演练基线：模拟4条作业线、160次交接，清单回查6小时；这是虚构样本，不代表该企业真实经营数据。",
+          "character": "林亦舟"
+        }
+      ],
+      "acceptance": "演练基线：模拟4条作业线、160次交接，清单回查6小时；这是虚构样本，不代表该企业真实经营数据。"
+    },
+    {
+      "title": "岗位作业交接包的版本交接与责任清单",
+      "owner": "交付项目协调员",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f20",
+          "source": "业务外包-007 · 访谈事实记录",
+          "text": "流程协调的责任是跟踪任务确认→培训记录→工序交接→异常回报→质量复核，每次交接记录接收人、版本与未结项。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "fsg-production-handover-f23",
+          "source": "业务外包-025 · 执行条件记录",
+          "text": "交接岗位作业交接包时必须列明最新版本、尚未确认事项和截止时间，不能只发一条“已处理”的消息。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "fsg-production-handover-f25",
+          "source": "业务外包-027 · 验证与反馈记录",
+          "text": "资料负责人保存岗位作业交接包的确认链，跨团队变更需要登记责任人，未确认项不能归到对方名下。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "fsg-production-handover-f21",
+          "source": "业务外包-008 · 业务事件样本",
+          "text": "可提供的练习资料包括虚构培训清单、工序指引版本和质量异常日志；均为合成样本，需要另行获取真实项目授权资料。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "fsg-production-handover-f22",
+          "source": "业务外包-009 · 流程与约束说明",
+          "text": "一线专员可提交岗位作业交接包的变更，正式确认由对应业务负责人完成，模型没有审批权限。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "fsg-production-handover-f24",
+          "source": "业务外包-026 · 协作规则记录",
+          "text": "对岗位作业交接包采用版本有效期和确认状态两个条件，作废记录保留原因，不靠文件名猜测最新版本。",
+          "character": "唐映秋"
+        }
+      ],
+      "acceptance": "一线专员可提交岗位作业交接包的变更，正式确认由对应业务负责人完成，模型没有审批权限。"
+    },
+    {
+      "title": "岗位作业交接包的数据关联与只读集成",
+      "owner": "数据与系统工程师",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f30",
+          "source": "业务外包-010 · 访谈事实记录",
+          "text": "演练环境使用内部服务台、业务台账与文件库三类工具，岗位作业交接包尚无统一关联编号。",
+          "character": "秦芮"
+        },
+        {
+          "id": "fsg-production-handover-f31",
+          "source": "业务外包-011 · 业务事件样本",
+          "text": "需要对齐的关键字段为岗位代号、工序、指引版本、培训确认、异常及复核人；缺失值与未确认值必须区分。",
+          "character": "秦芮"
+        },
+        {
+          "id": "fsg-production-handover-f32",
+          "source": "业务外包-012 · 流程与约束说明",
+          "text": "试点只开放岗位作业交接包的脱敏只读导出；写回、外部消息和执行接口均不开放。",
+          "character": "秦芮"
+        },
+        {
+          "id": "fsg-production-handover-f35",
+          "source": "业务外包-030 · 验证与反馈记录",
+          "text": "读取失败时保留上次岗位作业交接包快照并标记时间；提示人工核查，不编造最新状态或悄悄重试业务动作。",
+          "character": "秦芮"
+        },
+        {
+          "id": "fsg-production-handover-f33",
+          "source": "业务外包-028 · 执行条件记录",
+          "text": "数据质量检查先核对岗位作业交接包的重复编号、空时间、版本断链与单位差异，问题记录必须保留原行。",
+          "character": "秦芮"
+        },
+        {
+          "id": "fsg-production-handover-f34",
+          "source": "业务外包-029 · 协作规则记录",
+          "text": "更新岗位作业交接包时同时记录业务发生时间和系统接收时间；过期来源不能覆盖已确认的新版本。",
+          "character": "秦芮"
+        }
+      ],
+      "acceptance": "试点只开放岗位作业交接包的脱敏只读导出；写回、外部消息和执行接口均不开放。"
+    },
+    {
+      "title": "岗位作业交接包的质量验收与权限约束",
+      "owner": "质量复核负责人",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f42",
+          "source": "业务外包-015 · 流程与约束说明",
+          "text": "演练质量标准：50次交接全部匹配指引版本，未复核异常保留责任人与状态；每条结果还要关联来源和人工复核记录。",
+          "character": "傅景"
+        },
+        {
+          "id": "fsg-production-handover-f44",
+          "source": "业务外包-032 · 协作规则记录",
+          "text": "无法确认岗位作业交接包版本或关键字段时进入人工处理队列，必要时暂停试点，不能默认通过。",
+          "character": "傅景"
+        },
+        {
+          "id": "fsg-production-handover-f40",
+          "source": "业务外包-013 · 访谈事实记录",
+          "text": "审核关注岗位作业交接包的授权用途、来源完整性与错误传播风险；不把练习结果作为实际业务指令。",
+          "character": "傅景"
+        },
+        {
+          "id": "fsg-production-handover-f41",
+          "source": "业务外包-014 · 业务事件样本",
+          "text": "所有岗位作业交接包的正式结论须由授权人员确认；跨企业资料只按明确授权范围访问。",
+          "character": "傅景"
+        },
+        {
+          "id": "fsg-production-handover-f43",
+          "source": "业务外包-031 · 执行条件记录",
+          "text": "留存岗位作业交接包的原始版本、修订原因与确认人，练习结束按项目约定删除虚构个人字段。",
+          "character": "傅景"
+        },
+        {
+          "id": "fsg-production-handover-f45",
+          "source": "业务外包-033 · 验证与反馈记录",
+          "text": "审计要看到谁查过岗位作业交接包、使用哪个版本、提出什么建议及谁确认，访问记录不能只留下最终摘要。",
+          "character": "傅景"
+        }
+      ],
+      "acceptance": "演练质量标准：50次交接全部匹配指引版本，未复核异常保留责任人与状态；每条结果还要关联来源和人工复核记录。"
+    },
+    {
+      "title": "岗位作业交接包的跨团队口径确认",
+      "owner": "客户项目负责人",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "fsg-production-handover-f53",
+          "source": "业务外包-034 · 执行条件记录",
+          "text": "同一岗位作业交接包的数量、状态和截止时间要在交接双方之间核对，以原始记录定义口径而不是比较两张汇总表。",
+          "character": "叶书"
+        },
+        {
+          "id": "fsg-production-handover-f51",
+          "source": "业务外包-017 · 业务事件样本",
+          "text": "协作评估既看岗位作业交接包处理工时，也看返工次数和确认完整率，不能用单一效率指标解释效果。",
+          "character": "叶书"
+        },
+        {
+          "id": "fsg-production-handover-f52",
+          "source": "业务外包-018 · 流程与约束说明",
+          "text": "本轮协作边界：不控制真实设备、不代替安全培训或批准生产放行；对外承诺仍由业务人员确认。",
+          "character": "叶书"
+        },
+        {
+          "id": "fsg-production-handover-f54",
+          "source": "业务外包-035 · 协作规则记录",
+          "text": "当客户投诉岗位作业交接包的结果错误时，先登记原始问题、相关版本与恢复需求，不用模型推测客户意图。",
+          "character": "叶书"
+        },
+        {
+          "id": "fsg-production-handover-f50",
+          "source": "业务外包-016 · 访谈事实记录",
+          "text": "跨团队的具体冲突是生产协调关注交接速度，质量人员需要保留异常复核窗口；先澄清各自目标再讨论工具。",
+          "character": "叶书"
+        },
+        {
+          "id": "fsg-production-handover-f55",
+          "source": "业务外包-036 · 验证与反馈记录",
+          "text": "每周收集岗位作业交接包的误报、漏报和未确认项，双方共同复盘；只修模板不核对效果不足以结束试点。",
+          "character": "叶书"
+        }
+      ],
+      "acceptance": "本轮协作边界：不控制真实设备、不代替安全培训或批准生产放行；对外承诺仍由业务人员确认。"
+    }
+  ],
+  "gaps": [
+    {
+      "role": "外包现场专员",
+      "character": "林亦舟",
+      "topic": "复核",
+      "question": "辅助结果怎么复核，发现错误怎么办？"
+    }
+  ],
+  "transcript": [
+    {
+      "id": "turn-1",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r0",
+      "text": "请以最近一次培训版本与工序交接异常为例，说明业务目标、当前完整流程、交接角色、耗时单量及样本证据；目前瓶颈和损失是什么？试点范围、预算、决策人、验收指标与禁止自动化边界分别是什么？哪些信息未核实，请明确标记。",
+      "at": "2026-11-05T05:36:31.951Z"
+    },
+    {
+      "id": "turn-2",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r0",
+      "text": "先按我这边能确认的口径说。业务目标不是把交接做成自动流转，而是让岗位作业交接包减少重复核对，同时保留人工确认和可追溯来源[fsg-production-handover-f00]。完整链路是任务确认→培训记录→工序交接→异常回报→质量复核，先观察每个交接点，不直接上自动化[fsg-production-handover-f01]。\n\n但您要的“最近一次培训版本与工序指引不一致”的具体案例、交接角色名单、耗时和单量，我手上没有可引用的记录，尚未核实，不能拿印象当证据。瓶颈和损失金额同样尚未核实；我只能说，若培训版本与工序指引不一致而交接单只写“已完成”，风险会落在人工复核环节，这一点需要现场和质量一起补样本。\n\n试点范围我倾向先选一个交接点做观察，不铺开；预算、决策人、验收指标目前尚未核实，需要您明确由谁拍板。禁止自动化边界我的立场是：人工确认和可追溯来源不能省[fsg-production-handover-f00]，异常识别与复核不能交给系统自动放行。这些是待验证假设，需与傅景、秦芮对齐后再定。",
+      "at": "2026-11-05T05:36:31.951Z",
+      "factIds": [
+        "fsg-production-handover-f00",
+        "fsg-production-handover-f01"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "55611270-1cac-435c-a20b-210b4e377162",
+        "at": "2026-11-05T05:36:31.951Z",
+        "durationMs": 4473,
+        "usage": {
+          "prompt_tokens": 912,
+          "completion_tokens": 286,
+          "total_tokens": 1198
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "246700c4-43e7-4386-b6dd-40f62229bbe6",
+          "at": "2026-11-05T05:36:27.478Z",
+          "durationMs": 818,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 54,
+            "total_tokens": 481
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-3",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "请按最近一单还原从任务确认、培训记录到工序交接的实际步骤，培训材料版本在哪里查？交接单缺了哪些信息、返工如何发生、谁接手异常？请给可追溯的记录及证据编号；未提供的数量和耗时请标待补。",
+      "at": "2026-11-05T05:37:57.666Z"
+    },
+    {
+      "id": "turn-4",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "我按最近一单讲，能确认的先说清楚。现场的具体困难是培训版本与工序指引不一致，交接单只写已完成，发生节点和受影响对象需要记录 [fsg-production-handover-f10]。最近一个模拟异常是工序检查项新增后，夜班仍用旧清单并漏记一项复核，得先查原始版本才能判断责任 [fsg-production-handover-f11]。\n\n步骤上我只能还原到：任务确认后按当时拿到的培训材料作业，交接时在单上勾已完成；版本在哪查、由谁维护，我这边尚未核实，需要唐映秋或秦芮确认。交接单缺哪些字段、返工怎么发生、异常由谁接手，目前没有可追溯记录支撑，我不虚构。数量和耗时均待补。\n\n建议先做待验证假设：交接单增加培训材料版本号、检查项清单版本、漏记项与接手人四栏，异常统一走人工复核。这涉及我的复核边界，需傅景确认审核口径，也请顾明岚明确试点范围，否则我无法承诺执行。",
+      "at": "2026-11-05T05:37:57.666Z",
+      "factIds": [
+        "fsg-production-handover-f10",
+        "fsg-production-handover-f11"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "0656ef21-ab0e-4c2f-b490-6c5e055933ee",
+        "at": "2026-11-05T05:37:57.666Z",
+        "durationMs": 2558,
+        "usage": {
+          "prompt_tokens": 993,
+          "completion_tokens": 259,
+          "total_tokens": 1252
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "00b092c0-8060-4564-b19f-76ff8b49f01e",
+            "at": "2026-11-05T05:37:55.108Z",
+            "durationMs": 2534,
+            "usage": {
+              "prompt_tokens": 917,
+              "completion_tokens": 253,
+              "total_tokens": 1170
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "0656ef21-ab0e-4c2f-b490-6c5e055933ee",
+            "at": "2026-11-05T05:37:57.666Z",
+            "durationMs": 2558,
+            "usage": {
+              "prompt_tokens": 993,
+              "completion_tokens": 259,
+              "total_tokens": 1252
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "f077e8df-9a58-4772-bee5-f74bd12ea82f",
+          "at": "2026-11-05T05:37:52.574Z",
+          "durationMs": 924,
+          "usage": {
+            "prompt_tokens": 448,
+            "completion_tokens": 54,
+            "total_tokens": 502
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-5",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r0",
+      "text": "试点范围和哪些决策必须人工审批由谁决定？数据访问和安全授权怎么确认？",
+      "at": "2026-11-05T05:38:47.534Z"
+    },
+    {
+      "id": "turn-6",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r0",
+      "text": "试点范围由我拍板，但边界要按规则来：只覆盖一个批次的岗位作业交接包，不控制真实设备、不代替安全培训、不批准生产放行[fsg-production-handover-f05]。审核与质量负责人保留停止试点的权利，客户协同代表确认结果用途[fsg-production-handover-f04]。所以人工审批至少有三类：我定范围，傅景那边管审核与叫停，叶书确认结果用途；具体审批节点和表单我尚未核实，需要和唐映秋、傅景对齐后再定。\n\n数据访问和安全授权这块，不在我的决策权限内，我不能替秦芮或安全口表态。我的要求是：交接包只读关联、保留可追溯来源，人工确认不能省。授权方式、账号权限、数据留存期限都尚未核实，建议由秦芮出集成条件、傅景出合规边界，我这边只确认业务用途和试点范围。您能否明确一下，这次试点验收由谁签字、数据访问的审批人是谁？",
+      "at": "2026-11-05T05:38:47.534Z",
+      "factIds": [
+        "fsg-production-handover-f04",
+        "fsg-production-handover-f05"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "81b02e81-dc75-40cc-ba39-76e9247bcbfd",
+        "at": "2026-11-05T05:38:47.534Z",
+        "durationMs": 2561,
+        "usage": {
+          "prompt_tokens": 1235,
+          "completion_tokens": 245,
+          "total_tokens": 1480
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "2ac3c2fe-4c38-4730-b3ed-6df8f540ff6e",
+          "at": "2026-11-05T05:38:44.973Z",
+          "durationMs": 698,
+          "usage": {
+            "prompt_tokens": 748,
+            "completion_tokens": 38,
+            "total_tokens": 786
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-7",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "哪些资料由谁提供，系统和表单在哪里？现场最耗时和重复工作的原因是什么？",
+      "at": "2026-11-05T05:38:58.614Z"
+    },
+    {
+      "id": "turn-8",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "资料责任我只能说到我经手的部分：培训材料和工序指引是现场作业依据，但谁维护、从哪个入口取，我这边尚未核实，需要唐映秋确认资料责任、秦芮确认系统与表单位置。交接单目前只写已完成，缺版本号和检查项清单，这是现场最直接的断点 [fsg-production-handover-f10]。\n\n最耗时和重复工作的原因，我没有可追溯的耗时记录，不能给数量和比例，均待补。按现场观察，可提一个待验证假设：夜班用旧清单、漏记复核后要回头查原始版本才能判断责任，这类返工可能集中在版本核对和人工追查上 [fsg-production-handover-f11]。\n\n这直接影响我负责的异常识别与人工复核：如果表单不落版本号和接手人，异常只能靠人记，复核边界也没法定。请先明确试点范围，以及异常由谁接手、傅景的审核口径，否则我无法承诺执行。",
+      "at": "2026-11-05T05:38:58.614Z",
+      "factIds": [
+        "fsg-production-handover-f10",
+        "fsg-production-handover-f11"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "6dec0445-bae0-4551-bd2b-1ecb1408ed47",
+        "at": "2026-11-05T05:38:58.614Z",
+        "durationMs": 2410,
+        "usage": {
+          "prompt_tokens": 1214,
+          "completion_tokens": 239,
+          "total_tokens": 1453
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "5990d8cb-b5e9-40ea-b166-4f96956db5dd",
+          "at": "2026-11-05T05:38:56.204Z",
+          "durationMs": 1067,
+          "usage": {
+            "prompt_tokens": 744,
+            "completion_tokens": 54,
+            "total_tokens": 798
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-9",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "如何复核版本和漏项、哪些不能自动做？当前处理量、耗时和成功标准有哪些可核实证据？",
+      "at": "2026-11-05T05:39:02.203Z"
+    },
+    {
+      "id": "turn-10",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "复核版本和漏项，我现场只能做到“先对版本、再对清单、最后对漏记项”这三步人工核对：先确认当班拿到的培训材料与工序指引是不是同一版本，再逐项比对检查项清单，发现漏记就回到原始版本查是哪一版新增的 [fsg-production-handover-f11]。这套动作依赖原始版本可查，版本从哪个入口取、由谁维护，我这边尚未核实，需要唐映秋和秦芮确认。\n\n不能自动做的部分：版本是否一致、漏项责任归属，我不接受系统直接判定，必须走人工复核，审核口径要傅景定；交接单只写已完成这个断点 [fsg-production-handover-f10]，也不能靠自动勾选掩盖。\n\n处理量、耗时、成功标准，我没有可追溯记录，均待补，不给数字。可提待验证假设：成功标准先定为“每单可查到版本号、漏记项和接手人”，试点范围请顾明岚明确，否则我无法承诺执行。",
+      "at": "2026-11-05T05:39:02.203Z",
+      "factIds": [
+        "fsg-production-handover-f10",
+        "fsg-production-handover-f11"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "f67d4419-b193-4c98-af45-b655d50c2366",
+        "at": "2026-11-05T05:39:02.202Z",
+        "durationMs": 2554,
+        "usage": {
+          "prompt_tokens": 1494,
+          "completion_tokens": 253,
+          "total_tokens": 1747
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b5a6fb4b-7a44-4778-829b-38a725e7014f",
+          "at": "2026-11-05T05:38:59.648Z",
+          "durationMs": 758,
+          "usage": {
+            "prompt_tokens": 1024,
+            "completion_tokens": 54,
+            "total_tokens": 1078
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-11",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "请按最近一次工序交接说明完整流程：谁给你什么输入、用哪些材料和系统、交给谁、输出是什么？",
+      "at": "2026-11-05T05:39:13.635Z"
+    },
+    {
+      "id": "turn-12",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "按我这条线的责任，流程是跟踪任务确认→培训记录→工序交接→异常回报→质量复核，每次交接都要记录接收人、版本与未结项 [fsg-production-handover-f20]。交接岗位作业交接包时必须列明最新版本、尚未确认事项和截止时间，不能只发一条“已处理”的消息 [fsg-production-handover-f23]。\n\n但具体到“谁给我什么输入、用哪些系统”，目前尚未核实：培训版本与工序指引不一致、交接单只写已完成，这两点我认可作为待验证问题，但输入来源和系统清单需要林亦舟、秦芮分别确认后才能落到责任清单上。\n\n我这边能定的是交接记录字段和未结项跟踪口径；涉及系统只读集成和权限，不在我权限内，需要秦芮和傅景确认边界。建议先明确试点范围里哪几道工序纳入版本交接，再定责任清单的签字人。",
+      "at": "2026-11-05T05:39:13.635Z",
+      "factIds": [
+        "fsg-production-handover-f20",
+        "fsg-production-handover-f23"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "21f9898f-7d30-49bd-9e95-81488f0889bd",
+        "at": "2026-11-05T05:39:13.635Z",
+        "durationMs": 2626,
+        "usage": {
+          "prompt_tokens": 965,
+          "completion_tokens": 231,
+          "total_tokens": 1196
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "bafb8186-5f03-4d7d-ad61-7876da8c8f46",
+            "at": "2026-11-05T05:39:11.009Z",
+            "durationMs": 2090,
+            "usage": {
+              "prompt_tokens": 889,
+              "completion_tokens": 190,
+              "total_tokens": 1079
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "21f9898f-7d30-49bd-9e95-81488f0889bd",
+            "at": "2026-11-05T05:39:13.635Z",
+            "durationMs": 2626,
+            "usage": {
+              "prompt_tokens": 965,
+              "completion_tokens": 231,
+              "total_tokens": 1196
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ea8eeddf-f263-4e1e-8076-d5e04b7ece9a",
+          "at": "2026-11-05T05:39:08.919Z",
+          "durationMs": 1170,
+          "usage": {
+            "prompt_tokens": 415,
+            "completion_tokens": 54,
+            "total_tokens": 469
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-13",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "培训记录与工序指引版本冲突或漏项时谁负责接手？跨部门哪些分歧、哪些需人工复核？",
+      "at": "2026-11-05T05:39:18.222Z"
+    },
+    {
+      "id": "turn-14",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "按我这条线的责任，培训记录与工序指引版本冲突或漏项，先由资料负责人保存岗位作业交接包的确认链，跨团队变更要登记责任人，未确认项不能归到对方名下 [fsg-production-handover-f25]；流程上我跟踪任务确认→培训记录→工序交接→异常回报→质量复核，每次交接记录接收人、版本与未结项 [fsg-production-handover-f20]。所以冲突或漏项先挂未结项、标清版本和责任人，再走异常回报，不能只写“已完成”就过。\n\n但“谁最终接手”目前尚未核实：是现场专员补培训记录，还是质量复核判定，需要林亦舟和傅景确认。跨部门分歧我判断集中在版本口径和未结项归属，哪些必须人工复核、复核签字人是谁，也尚未核实。建议先明确试点工序范围和确认链签字人，再落到责任清单。",
+      "at": "2026-11-05T05:39:18.222Z",
+      "factIds": [
+        "fsg-production-handover-f20",
+        "fsg-production-handover-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ec5a83a7-0c90-41d2-a6ae-c4332ad48a82",
+        "at": "2026-11-05T05:39:18.222Z",
+        "durationMs": 2252,
+        "usage": {
+          "prompt_tokens": 1163,
+          "completion_tokens": 227,
+          "total_tokens": 1390
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "04917984-fd8a-4ccb-a66e-a3febf52328f",
+          "at": "2026-11-05T05:39:15.970Z",
+          "durationMs": 1112,
+          "usage": {
+            "prompt_tokens": 689,
+            "completion_tokens": 46,
+            "total_tokens": 735
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-15",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "如何统计交接耗时、返工和成功完成？请给样本与验收口径，未确认的标待补。",
+      "at": "2026-11-05T05:39:21.887Z"
+    },
+    {
+      "id": "turn-16",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "统计口径我只能定到交接记录字段这一层：按流程每次交接要记录接收人、版本与未结项 [fsg-production-handover-f20]，交接包必须列明最新版本、尚未确认事项和截止时间 [fsg-production-handover-f23]。所以我的建议是——交接耗时按“任务确认到接收人签收”的起止时间算，返工按“未结项被退回或版本重发”的次数算，成功完成按“接收人确认且无未结项”判定。这三条是我提出的待验证假设，不是已定制度。\n\n样本范围尚未核实：试点工序是哪几道、取多长时间窗、样本量多少，需要顾明岚定试点范围、林亦舟确认现场可采集性。系统侧能否自动取时间戳和版本变更，不在我权限内，要秦芮确认只读集成条件；返工是否算质量事件、由谁复核，需傅景定审核边界。\n\n验收口径我建议先落到责任清单：每条统计指标标明数据来源、责任人和复核人，未确认项挂未结项，不能只写“已完成”。请先明确试点范围和签字人，我再出字段清单。",
+      "at": "2026-11-05T05:39:21.887Z",
+      "factIds": [
+        "fsg-production-handover-f20",
+        "fsg-production-handover-f23"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "8e1333f8-bb92-4cd6-b1fb-6839ace40413",
+        "at": "2026-11-05T05:39:21.887Z",
+        "durationMs": 2384,
+        "usage": {
+          "prompt_tokens": 1433,
+          "completion_tokens": 284,
+          "total_tokens": 1717
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "572d26fd-b9b2-4996-ae10-45a1b05d7efd",
+          "at": "2026-11-05T05:39:19.503Z",
+          "durationMs": 984,
+          "usage": {
+            "prompt_tokens": 958,
+            "completion_tokens": 46,
+            "total_tokens": 1004
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-17",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r3",
+      "text": "本项目的数据、培训资料、工序指引与交接单分别在哪些系统，关联字段和版本来源是什么？数据多久更新？",
+      "at": "2026-11-05T05:39:26.353Z"
+    },
+    {
+      "id": "turn-18",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r3",
+      "text": "先按我这边能确认的说：演练环境里只有内部服务台、业务台账与文件库三类工具，岗位作业交接包目前没有统一关联编号 [fsg-production-handover-f30]。所以培训资料、工序指引、交接单具体各落在哪个系统、谁维护、更新频率，我尚未核实，不能凭印象给你答案。\n\n能明确的是关联口径：需要对齐岗位代号、工序、指引版本、培训确认、异常及复核人，且缺失值与未确认值必须区分开 [fsg-production-handover-f31]。版本来源我建议以指引版本字段为锚点，但这是待验证假设，需要唐映秋确认资料责任归属。\n\n我关心的是：没有统一关联编号，只读集成只能靠字段拼，跨系统对不上的风险会直接落到交接包质量验收上。请先明确试点范围覆盖哪些岗位和工序，我再判断集成条件是否够用。",
+      "at": "2026-11-05T05:39:26.353Z",
+      "factIds": [
+        "fsg-production-handover-f30",
+        "fsg-production-handover-f31"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "e16b8ea3-fc81-42e8-9c57-c6bda5c0994b",
+        "at": "2026-11-05T05:39:26.353Z",
+        "durationMs": 2307,
+        "usage": {
+          "prompt_tokens": 884,
+          "completion_tokens": 224,
+          "total_tokens": 1108
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "d5328f10-4a86-44d6-966e-854bab4c666d",
+          "at": "2026-11-05T05:39:24.046Z",
+          "durationMs": 922,
+          "usage": {
+            "prompt_tokens": 411,
+            "completion_tokens": 38,
+            "total_tokens": 449
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-19",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r3",
+      "text": "只读集成需要什么权限、哪些操作不能自动写入？接口中断、超时、缺数据或版本冲突时如何降级？",
+      "at": "2026-11-05T05:39:29.532Z"
+    },
+    {
+      "id": "turn-20",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r3",
+      "text": "权限边界我先说清楚：试点只开放岗位作业交接包的脱敏只读导出，写回、外部消息和执行接口都不开放 [fsg-production-handover-f32]。所以培训确认、复核结论、交接单状态这类写操作，一律不能由集成侧自动落库，只能由责任人在原系统里操作，我这边最多做只读呈现。\n\n降级方面，读取失败时保留上次交接包快照并标记时间，提示人工核查，不编造最新状态，也不悄悄重试业务动作 [fsg-production-handover-f35]。超时我按读取失败处理；缺数据要区分缺失值与未确认值，不能混成空；版本冲突我倾向以指引版本字段为锚点并挂起该条，等唐映秋确认资料责任后再定，这是待验证假设。\n\n我需要你明确：试点覆盖哪些岗位和工序、可接受的快照时效是多少，否则降级阈值和人工核查触发点我没法定。",
+      "at": "2026-11-05T05:39:29.532Z",
+      "factIds": [
+        "fsg-production-handover-f32",
+        "fsg-production-handover-f35"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "979445e1-0e7f-4c8b-a585-bdf41ec0db39",
+        "at": "2026-11-05T05:39:29.532Z",
+        "durationMs": 2301,
+        "usage": {
+          "prompt_tokens": 1160,
+          "completion_tokens": 235,
+          "total_tokens": 1395
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "30cd0327-6ac2-497a-b874-734736b27042",
+          "at": "2026-11-05T05:39:27.231Z",
+          "durationMs": 665,
+          "usage": {
+            "prompt_tokens": 682,
+            "completion_tokens": 38,
+            "total_tokens": 720
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-21",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r3",
+      "text": "请给当前可提供的字段、数据样本、评估条件和验收口径；哪些数字及授权还未确认？",
+      "at": "2026-11-05T05:39:33.340Z"
+    },
+    {
+      "id": "turn-22",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r3",
+      "text": "字段层面我能给的是对齐口径：岗位代号、工序、指引版本、培训确认、异常及复核人，且缺失值与未确认值必须分开存，不能都落成空 [fsg-production-handover-f31]。数据样本我手上只有业务事件样本这一层，具体行数、覆盖岗位数尚未核实，不能报数。\n\n评估条件我建议按质量检查口径走：先查交接包重复编号、空时间、版本断链与单位差异，问题记录保留原行，不覆盖原始数据 [fsg-production-handover-f33]。这是我能承诺的检查项，但阈值和通过标准还没定。\n\n验收口径上，只读导出能稳定产出、字段可追溯、异常可人工复核，是我认为的底线；具体验收指标需要顾明岚和傅景确认。\n\n未确认的数字与授权：试点岗位与工序范围、可接受快照时效、样本量、只读导出的审批人，以及跨系统字段对不上的容忍度，都尚未核实。请先明确试点范围和快照时效，否则评估条件和验收阈值我定不了。",
+      "at": "2026-11-05T05:39:33.340Z",
+      "factIds": [
+        "fsg-production-handover-f31",
+        "fsg-production-handover-f33"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "a78ab97f-e051-4029-8bc2-51e0c82a386a",
+        "at": "2026-11-05T05:39:33.340Z",
+        "durationMs": 2852,
+        "usage": {
+          "prompt_tokens": 1435,
+          "completion_tokens": 265,
+          "total_tokens": 1700
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "46f050d2-2b9b-4d2d-b123-57f905fcf924",
+          "at": "2026-11-05T05:39:30.488Z",
+          "durationMs": 715,
+          "usage": {
+            "prompt_tokens": 956,
+            "completion_tokens": 54,
+            "total_tokens": 1010
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-23",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r4",
+      "text": "怎么验收成功、试点标准是什么？请给可核实样本与指标，未确定的标待补。",
+      "at": "2026-11-05T05:39:52.816Z"
+    },
+    {
+      "id": "turn-24",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r4",
+      "text": "验收口径我这边只认可复核的证据，不认“已完成”三个字。按现有演练标准，50次交接要全部匹配指引版本，未复核的异常必须保留责任人与状态，每条结果还要能关联来源和人工复核记录 [fsg-production-handover-f42]。这意味着交接单只写“已完成”不能作为通过依据，必须能追到版本、责任人和复核痕迹。\n\n兜底规则也要写进验收：无法确认交接包版本或关键字段时，进人工处理队列，必要时暂停试点，不能默认通过 [fsg-production-handover-f44]。\n\n待补项：50次样本的抽取范围、异常判定清单、复核人权限边界、留存期限，目前尚未核实，需要顾明岚和唐映秋确认口径后再定。试点范围我建议先限定在可完整留痕的工序，但这是待验证假设。",
+      "at": "2026-11-05T05:39:52.816Z",
+      "factIds": [
+        "fsg-production-handover-f42",
+        "fsg-production-handover-f44"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ba21a9f9-d077-420b-89bd-62b12e3545e4",
+        "at": "2026-11-05T05:39:52.816Z",
+        "durationMs": 2319,
+        "usage": {
+          "prompt_tokens": 954,
+          "completion_tokens": 215,
+          "total_tokens": 1169
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "3009e7aa-8825-4f80-ac5e-53e14b277eed",
+            "at": "2026-11-05T05:39:50.497Z",
+            "durationMs": 2217,
+            "usage": {
+              "prompt_tokens": 878,
+              "completion_tokens": 216,
+              "total_tokens": 1094
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "ba21a9f9-d077-420b-89bd-62b12e3545e4",
+            "at": "2026-11-05T05:39:52.816Z",
+            "durationMs": 2319,
+            "usage": {
+              "prompt_tokens": 954,
+              "completion_tokens": 215,
+              "total_tokens": 1169
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ea76541c-a7c4-4c8c-8dbe-49a50bf517dc",
+          "at": "2026-11-05T05:39:48.280Z",
+          "durationMs": 764,
+          "usage": {
+            "prompt_tokens": 401,
+            "completion_tokens": 54,
+            "total_tokens": 455
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-25",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r5",
+      "text": "有多少单、花多久，有统计样本吗？客户对成功完成的标准是什么？",
+      "at": "2026-11-05T05:40:04.282Z"
+    },
+    {
+      "id": "turn-26",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r5",
+      "text": "单量和工时我这边没有可引用的统计样本，尚未核实，不能拿汇总数直接回答你。口径上我坚持一条：同一岗位作业交接包的数量、状态和截止时间，要在交接双方之间核对，以原始记录定义口径，而不是比较两张汇总表 [fsg-production-handover-f53]。客户侧看成功，不是只看处理快慢，协作评估既看处理工时，也看返工次数和确认完整率，不能用单一效率指标解释效果 [fsg-production-handover-f51]。所以你要的样本，我建议按岗位、按交接包状态分层取原始记录，先小范围试点再谈推广；具体样本量和试点范围需要和顾明岚、唐映秋对齐，属于待验证假设。另外请澄清：你说的“成功完成”是客户验收口径，还是现场交接完成口径？两者不一致会直接影响我对外反馈和投诉判断。",
+      "at": "2026-11-05T05:40:04.282Z",
+      "factIds": [
+        "fsg-production-handover-f53",
+        "fsg-production-handover-f51"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "95f05575-628b-4c63-9ed9-eb0636ff13a2",
+        "at": "2026-11-05T05:40:04.282Z",
+        "durationMs": 2060,
+        "usage": {
+          "prompt_tokens": 873,
+          "completion_tokens": 214,
+          "total_tokens": 1087
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "7e8cde55-18f2-4866-86f1-94dd93ef8519",
+          "at": "2026-11-05T05:40:02.221Z",
+          "durationMs": 1293,
+          "usage": {
+            "prompt_tokens": 409,
+            "completion_tokens": 30,
+            "total_tokens": 439
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-27",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r5",
+      "text": "本次试点范围与不能自动做的事情是什么？客户投诉和试点反馈如何收集、闭环与验收？",
+      "at": "2026-11-05T05:40:07.835Z"
+    },
+    {
+      "id": "turn-28",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r5",
+      "text": "试点范围我这边只能给口径约束，具体名单和批次尚未核实，需要和顾明岚、唐映秋对齐后确认。我能明确的是边界：不控制真实设备、不代替安全培训、不批准生产放行，对外承诺仍由业务人员确认 [fsg-production-handover-f52]。所以试点里凡是涉及放行、安全判定、对外承诺的动作，都不能由系统或模型自动做，只能出提示、留记录、转人工。\n\n投诉收集上，客户反映交接包结果错误时，先登记原始问题、相关版本和恢复需求，不用模型去推测客户意图 [fsg-production-handover-f54]。试点反馈我建议按同一路径走：原始记录、版本号、责任方、恢复动作四项齐全才算登记完成，闭环由对应责任方确认，验收看确认完整率和返工次数，而不是只看处理快慢。\n\n需要你澄清：试点反馈的登记入口是走现有投诉渠道，还是单开一张表？这决定我对外反馈的口径能不能统一，属于待验证假设。",
+      "at": "2026-11-05T05:40:07.835Z",
+      "factIds": [
+        "fsg-production-handover-f52",
+        "fsg-production-handover-f54"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "c7483572-6e2c-4df2-a93c-94c38ae1d188",
+        "at": "2026-11-05T05:40:07.835Z",
+        "durationMs": 2439,
+        "usage": {
+          "prompt_tokens": 1127,
+          "completion_tokens": 253,
+          "total_tokens": 1380
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "71b5450d-b267-4233-8d7d-90f7aa42d3ba",
+          "at": "2026-11-05T05:40:05.396Z",
+          "durationMs": 807,
+          "usage": {
+            "prompt_tokens": 662,
+            "completion_tokens": 46,
+            "total_tokens": 708
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-29",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r0",
+      "text": "怎么验收成功？试点标准是什么？",
+      "at": "2026-11-05T05:43:47.041Z"
+    },
+    {
+      "id": "turn-30",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r0",
+      "text": "验收我按可核的口径说：演练试点验收要求50次交接全部匹配指引版本，未复核异常要保留责任人与状态[fsg-production-handover-f02]。这两条是我能拿来签字的东西，不是“感觉顺畅了”这种描述。\n\n试点标准上，范围只覆盖一个批次的岗位作业交接包，不控制真实设备、不代替安全培训、不批准生产放行[fsg-production-handover-f05]。所以试点成功不等于能推广，只证明这一个批次在人工复核下能对上版本、异常有归属。\n\n还有两点尚未核实：50次交接的样本由谁提供、异常由谁判定，需要现场和质量一起定；验收签字人和数据访问审批人也还没明确。我的建议是验收前先由傅景确认异常判定口径、唐映秋确认资料责任，否则“全部匹配”容易被解释成走过场。您这边能否先明确验收由谁签字？",
+      "at": "2026-11-05T05:43:47.041Z",
+      "factIds": [
+        "fsg-production-handover-f02",
+        "fsg-production-handover-f05"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "bb548782-23bd-4d79-a9ef-a93a5dee558f",
+        "at": "2026-11-05T05:43:47.041Z",
+        "durationMs": 2360,
+        "usage": {
+          "prompt_tokens": 1503,
+          "completion_tokens": 225,
+          "total_tokens": 1728
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "fff02fd7-3d0a-4499-94b9-0d8bfe827e17",
+          "at": "2026-11-05T05:43:44.681Z",
+          "durationMs": 1000,
+          "usage": {
+            "prompt_tokens": 1018,
+            "completion_tokens": 38,
+            "total_tokens": 1056
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-31",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r0",
+      "text": "试点预算是多少，成本怎样核算？",
+      "at": "2026-11-05T05:43:50.821Z"
+    },
+    {
+      "id": "turn-32",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r0",
+      "text": "预算我这边能确认的口径是：四周试点、两名业务骨干参与，每周投入不超过四小时，超出须重新评估[fsg-production-handover-f03]。这是投入约束，不是金额口径。\n\n成本核算方式尚未核实，我不能凭印象给数字。我的建议是按人力投入工时加复核工作量来核算，把现场、交接、质量三方的投入分开记，避免都摊到业务头上；这只是待验证假设，需要和唐映秋、傅景对齐后再定。\n\n另外提醒一点：如果试点范围扩到一个批次以上，或异常复核量超出预期，四周和每周四小时的约束就会被突破，那时必须重新评估，不能先做后补。您这边能否明确成本核算由谁出账、超支由谁审批？这直接决定我敢不敢把试点范围定死。",
+      "at": "2026-11-05T05:43:50.821Z",
+      "factIds": [
+        "fsg-production-handover-f03"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "945d2aa8-2f80-4971-9a1c-fd89e0b55a18",
+        "at": "2026-11-05T05:43:50.821Z",
+        "durationMs": 2148,
+        "usage": {
+          "prompt_tokens": 1699,
+          "completion_tokens": 195,
+          "total_tokens": 1894
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "85a87cf0-03ae-4e56-8b01-0f2dd5008a9b",
+          "at": "2026-11-05T05:43:48.673Z",
+          "durationMs": 744,
+          "usage": {
+            "prompt_tokens": 1269,
+            "completion_tokens": 14,
+            "total_tokens": 1283
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-33",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "现场操作有什么限制，设备和网络情况怎样？",
+      "at": "2026-11-05T05:44:00.999Z"
+    },
+    {
+      "id": "turn-34",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "现场操作的限制我先说能确认的：同事习惯先用群消息处理岗位作业交接包的问题，再补填表格，所以回填时间不能当作发生时间 [fsg-production-handover-f13]。这意味着我负责的异常识别不能拿回填时间排序或判断先后，否则复核结论会失真。另外正式闭环前由当班人员核对关键字段，系统建议不能覆盖原值或省略确认 [fsg-production-handover-f14]，所以异常识别只能提示，不能替人下结论。\n\n设备和网络情况我这边尚未核实，不能给具体配置或稳定性判断，需要秦芮确认系统与表单位置和集成条件。\n\n这直接影响我的复核边界：如果网络或设备不稳定，群消息先行会更普遍，回填时间偏差更大。建议试点前先明确异常以哪个时间点为准、由谁确认，这需傅景定审核口径、顾明岚明确试点范围，否则我无法承诺执行。",
+      "at": "2026-11-05T05:44:00.999Z",
+      "factIds": [
+        "fsg-production-handover-f13",
+        "fsg-production-handover-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "bc1038d3-3b50-4aa4-82aa-c68ac28aec6a",
+        "at": "2026-11-05T05:44:00.999Z",
+        "durationMs": 2364,
+        "usage": {
+          "prompt_tokens": 1770,
+          "completion_tokens": 228,
+          "total_tokens": 1998
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "2f4df11e-9267-49bb-adb5-e77db8148d57",
+          "at": "2026-11-05T05:43:58.635Z",
+          "durationMs": 869,
+          "usage": {
+            "prompt_tokens": 1304,
+            "completion_tokens": 30,
+            "total_tokens": 1334
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-35",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "一线有什么绕开系统的习惯，原因是什么？",
+      "at": "2026-11-05T05:44:04.489Z"
+    },
+    {
+      "id": "turn-36",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "绕开系统的习惯我能确认一个：同事习惯先用群消息处理岗位作业交接包的问题，再补填表格，所以回填时间不能当作发生时间 [fsg-production-handover-f13]。原因我这边尚未核实，不能替同事下结论；按现场观察可提待验证假设：群消息能即时喊到人、表格要等事后补，遇到版本不一致或漏记项时，先沟通再补单更省事。\n\n这对我的异常识别影响很直接：如果按回填时间排序，先后顺序会失真，复核结论就不可靠。另外正式闭环前由当班人员核对关键字段，系统建议不能覆盖原值或省略确认 [fsg-production-handover-f14]，所以异常只能提示、不能替人判定。\n\n建议试点前先明确异常以哪个时间点为准、由谁确认，这需傅景定审核口径、顾明岚明确试点范围，否则我无法承诺执行。",
+      "at": "2026-11-05T05:44:04.489Z",
+      "factIds": [
+        "fsg-production-handover-f13",
+        "fsg-production-handover-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "3069b0fe-d346-4e65-923a-d569af36b670",
+        "at": "2026-11-05T05:44:04.489Z",
+        "durationMs": 1872,
+        "usage": {
+          "prompt_tokens": 2025,
+          "completion_tokens": 229,
+          "total_tokens": 2254
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "3ad3e580-2e54-4a7f-a663-b62da32dfeb7",
+          "at": "2026-11-05T05:44:02.617Z",
+          "durationMs": 883,
+          "usage": {
+            "prompt_tokens": 1559,
+            "completion_tokens": 22,
+            "total_tokens": 1581
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-37",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "辅助结果怎么复核，发现错误怎么办？",
+      "at": "2026-11-05T05:44:09.212Z"
+    },
+    {
+      "id": "turn-38",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "辅助结果我这边只按“提示”用，不当结论用。复核动作还是三步：先对当班培训材料与工序指引是否同版本，再逐项比对检查项清单，最后对漏记项回查原始版本，判断是哪一版新增的 [fsg-production-handover-f11]。正式闭环前由当班人员核对关键字段，系统建议不能覆盖原值或省略确认 [fsg-production-handover-f14]，所以辅助结果与人工核对不一致时，以人工核对和原值为准，并留痕说明差异。\n\n发现错误怎么办：我能做的是当场标记、退回人工复核、记录差异和接手人，不自行改判责任归属。错误分级、谁有权关闭、是否要上报，我这边尚未核实，需傅景定审核口径；异常以哪个时间点为准也要一并明确，因为群消息先行、事后补表会让回填时间失真。建议试点前先定“错误标记—人工复核—关闭”的责任清单，这属待验证假设，需顾明岚明确试点范围，否则我无法承诺执行。",
+      "at": "2026-11-05T05:44:09.212Z",
+      "factIds": [
+        "fsg-production-handover-f11",
+        "fsg-production-handover-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "6a6108aa-d9d6-4972-b982-88521b03fe32",
+        "at": "2026-11-05T05:44:09.212Z",
+        "durationMs": 2518,
+        "usage": {
+          "prompt_tokens": 2284,
+          "completion_tokens": 257,
+          "total_tokens": 2541
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "10e12e6f-2096-451a-9080-384d57cf9f0f",
+          "at": "2026-11-05T05:44:06.694Z",
+          "durationMs": 1241,
+          "usage": {
+            "prompt_tokens": 1814,
+            "completion_tokens": 38,
+            "total_tokens": 1852
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-39",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "可以提供哪些材料、模板或证据？",
+      "at": "2026-11-05T05:44:14.222Z"
+    },
+    {
+      "id": "turn-40",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "我这条线能提供的材料，按现有依据是虚构培训清单、工序指引版本和质量异常日志，都是合成样本，真实项目授权资料要另行获取 [fsg-production-handover-f21]。模板方面，交接包必须列明最新版本、尚未确认事项和截止时间，不能只发“已处理” [fsg-production-handover-f23]，所以我可以按这个口径出交接包字段模板和未结项跟踪表，但这是我建议的模板，不是已定制度。\n\n证据链上，版本冲突和漏项要能对应到具体版本号和确认链，不能只凭口头说明。哪些材料能作为验收证据、由谁签字确认，尚未核实，需要傅景定审核边界、顾明岚定试点范围。另外，真实授权资料的获取路径和审批人也不在我权限内，请先明确这两点，我再列材料清单和责任人。",
+      "at": "2026-11-05T05:44:14.222Z",
+      "factIds": [
+        "fsg-production-handover-f21",
+        "fsg-production-handover-f23"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "cf589fe9-d0c0-44da-8e28-0b6180561171",
+        "at": "2026-11-05T05:44:14.222Z",
+        "durationMs": 2113,
+        "usage": {
+          "prompt_tokens": 1737,
+          "completion_tokens": 214,
+          "total_tokens": 1951
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "481bc275-b4c5-4f06-866d-5f5c07e82f38",
+          "at": "2026-11-05T05:44:12.109Z",
+          "durationMs": 912,
+          "usage": {
+            "prompt_tokens": 1266,
+            "completion_tokens": 38,
+            "total_tokens": 1304
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-41",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "哪些操作必须人工审批，谁有权限？",
+      "at": "2026-11-05T05:44:18.686Z"
+    },
+    {
+      "id": "turn-42",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "按我这条线能确认的权限边界：一线专员可以提交岗位作业交接包的变更，但正式确认必须由对应业务负责人完成，模型没有审批权限 [fsg-production-handover-f22]。所以“提交”和“确认”是两件事，交接包里未确认的事项只能挂未结项，不能当成已审批通过。\n\n责任链上，资料负责人保存确认链，跨团队变更要登记责任人，未确认项不能归到对方名下 [fsg-production-handover-f25]。这意味着跨团队变更的登记动作在我这条线的资料责任范围内，但“谁签字生效”要看业务负责人。\n\n具体哪些操作必须走人工审批、审批人名单是谁，目前尚未核实：我判断至少版本变更确认、跨团队变更登记、未结项关闭这三类要落到人，但这是我的待验证假设。需要顾明岚定试点范围内的确认人，傅景定质量复核的审核边界。请先明确这两点，我再把审批节点写进责任清单。",
+      "at": "2026-11-05T05:44:18.686Z",
+      "factIds": [
+        "fsg-production-handover-f22",
+        "fsg-production-handover-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "c094f24d-9a13-4650-a843-e37f2e70b4f8",
+        "at": "2026-11-05T05:44:18.686Z",
+        "durationMs": 2037,
+        "usage": {
+          "prompt_tokens": 1973,
+          "completion_tokens": 241,
+          "total_tokens": 2214
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "3d7640ce-cc39-47aa-9d8d-757009b5178e",
+          "at": "2026-11-05T05:44:16.649Z",
+          "durationMs": 1243,
+          "usage": {
+            "prompt_tokens": 1507,
+            "completion_tokens": 30,
+            "total_tokens": 1537
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-43",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r2",
+      "text": "业务规则如何维护，冲突如何处理？",
+      "at": "2026-11-05T05:44:23.216Z"
+    },
+    {
+      "id": "turn-44",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r2",
+      "text": "业务规则维护我只能定到交接包这一层：版本判断采用“版本有效期+确认状态”两个条件，作废记录保留原因，不靠文件名猜最新版本 [fsg-production-handover-f24]；确认链由资料负责人保存，跨团队变更登记责任人，未确认项不能归到对方名下 [fsg-production-handover-f25]。所以冲突处理我的口径是：先按有效期和确认状态判定哪版有效，作废版留原因不删，冲突项挂未结项并登记责任人，再走异常回报，不能只写“已完成”。\n\n但规则由谁维护、多久复核一次、冲突升级到哪一级，目前尚未核实。我判断至少版本作废和跨团队变更登记要落到人，这是我的待验证假设。需要顾明岚定试点范围内的规则确认人，傅景定质量复核边界；系统侧能否只读校验版本状态，要秦芮确认。请先明确这三点，我再把规则维护节点写进责任清单。",
+      "at": "2026-11-05T05:44:23.216Z",
+      "factIds": [
+        "fsg-production-handover-f24",
+        "fsg-production-handover-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "201949ef-5bff-407f-9bc8-b5d931819c28",
+        "at": "2026-11-05T05:44:23.216Z",
+        "durationMs": 2081,
+        "usage": {
+          "prompt_tokens": 2241,
+          "completion_tokens": 239,
+          "total_tokens": 2480
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "8a66f01c-8eed-4b03-aa6f-5d10af8d52f7",
+          "at": "2026-11-05T05:44:21.135Z",
+          "durationMs": 1064,
+          "usage": {
+            "prompt_tokens": 1772,
+            "completion_tokens": 38,
+            "total_tokens": 1810
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-45",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r3",
+      "text": "数据多久更新，过期信息如何识别？",
+      "at": "2026-11-05T05:44:27.392Z"
+    },
+    {
+      "id": "turn-46",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r3",
+      "text": "更新频率我尚未核实，不能报具体周期。我能确认的是更新时的记录规则：岗位作业交接包更新要同时记录业务发生时间和系统接收时间，过期来源不能覆盖已确认的新版本 [fsg-production-handover-f34]。所以识别过期信息靠两个时间戳比对，而不是靠“看起来新不新”。\n\n读取失败或超时时，保留上次交接包快照并标记时间，提示人工核查，不编造最新状态，也不悄悄重试业务动作 [fsg-production-handover-f35]。这样过期信息至少能被看见、被追溯。\n\n但“多久算过期”这个阈值我定不了，取决于你们可接受的快照时效和试点覆盖的岗位工序范围。请先明确这两项，我再判断是否需要按工序分级设时效，这是待验证假设。",
+      "at": "2026-11-05T05:44:27.392Z",
+      "factIds": [
+        "fsg-production-handover-f34",
+        "fsg-production-handover-f35"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "c5969657-b4be-4877-b16f-2cb974153d65",
+        "at": "2026-11-05T05:44:27.392Z",
+        "durationMs": 1624,
+        "usage": {
+          "prompt_tokens": 1724,
+          "completion_tokens": 198,
+          "total_tokens": 1922
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "a4379c42-4fdb-4404-826e-91cce4ca09ac",
+          "at": "2026-11-05T05:44:25.768Z",
+          "durationMs": 881,
+          "usage": {
+            "prompt_tokens": 1247,
+            "completion_tokens": 30,
+            "total_tokens": 1277
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-47",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-05T05:44:31.596Z"
+    },
+    {
+      "id": "turn-48",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r4",
+      "text": "红线我这边分三层看。第一层是用途边界：岗位作业交接包只能用于授权用途，练习结果不能当成实际业务指令去执行，这是审核关注的核心风险 [fsg-production-handover-f40]。第二层是权限边界：正式结论必须由授权人员确认，跨企业资料只能在明确授权范围内访问，超出授权范围我一律不签 [fsg-production-handover-f41]。第三层是证据边界：来源不完整、版本对不上、复核痕迹缺失的交接包，不能进入正式结论，只能进人工处理队列。\n\n需要澄清的是：授权人员名单、跨企业资料的具体授权范围、错误传播的判定标准，目前尚未核实，需要顾明岚和唐映秋先给口径。另外我建议把“练习数据不得回流为业务指令”写成验收硬条件，但这是待验证假设，需确认后再定。",
+      "at": "2026-11-05T05:44:31.596Z",
+      "factIds": [
+        "fsg-production-handover-f40",
+        "fsg-production-handover-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "c4b63118-d5df-4b8e-a313-780c2bc1b7cc",
+        "at": "2026-11-05T05:44:31.596Z",
+        "durationMs": 1825,
+        "usage": {
+          "prompt_tokens": 1112,
+          "completion_tokens": 211,
+          "total_tokens": 1323
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "8afc1093-61fa-4774-9d4c-2a985a6b30bb",
+          "at": "2026-11-05T05:44:29.771Z",
+          "durationMs": 745,
+          "usage": {
+            "prompt_tokens": 641,
+            "completion_tokens": 46,
+            "total_tokens": 687
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-49",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r4",
+      "text": "哪些操作必须人工审批，谁有权限？",
+      "at": "2026-11-05T05:44:34.705Z"
+    },
+    {
+      "id": "turn-50",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r4",
+      "text": "人工审批的触发点，我按证据缺口来划：交接包版本无法确认、关键字段缺失、来源与复核痕迹对不上，这几类必须进人工处理队列，不能默认通过 [fsg-production-handover-f44]。正式结论一律由授权人员确认，跨企业资料只在明确授权范围内访问，超出授权范围我不签 [fsg-production-handover-f41]。\n\n但“谁有权限”这一层，目前尚未核实：授权人员名单、各角色可批的层级、跨企业资料的具体授权范围，都还没有书面口径。我的立场是权限清单必须先于试点落地，否则复核结论没有责任主体。建议由顾明岚定业务授权口径、唐映秋定资料责任归属，我这边只负责按清单核验复核痕迹，不代替业务方授权。这是待验证假设，需确认后再定。",
+      "at": "2026-11-05T05:44:34.705Z",
+      "factIds": [
+        "fsg-production-handover-f41",
+        "fsg-production-handover-f44"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "3a2f6a37-67c4-4ed0-a368-05de7cc5b4ca",
+        "at": "2026-11-05T05:44:34.705Z",
+        "durationMs": 2052,
+        "usage": {
+          "prompt_tokens": 1350,
+          "completion_tokens": 207,
+          "total_tokens": 1557
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "6503e656-9e05-4a29-bcc5-5094db265854",
+          "at": "2026-11-05T05:44:32.653Z",
+          "durationMs": 439,
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 30,
+            "total_tokens": 909
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-51",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r4",
+      "text": "记录保留多久，删除和留存如何处理？",
+      "at": "2026-11-05T05:44:38.214Z"
+    },
+    {
+      "id": "turn-52",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r4",
+      "text": "留存这块我按两条硬要求看：原始版本、修订原因和确认人都要留，练习结束按项目约定删除虚构个人字段 [fsg-production-handover-f43]；审计侧要能看到谁查过、用的哪个版本、提了什么建议、谁确认，访问记录不能只留最终摘要 [fsg-production-handover-f45]。所以“只写已完成”的交接单在留存和审计上都过不了。\n\n但具体保留期限、删除触发时点、删除审批人，目前尚未核实，需要顾明岚和唐映秋给书面口径。我的边界是：删除动作必须有授权人确认并留痕，不能由复核环节自行清理。建议把“删除前留痕、删除后不可回溯”写成验收条件，这是待验证假设，需确认后再定。",
+      "at": "2026-11-05T05:44:38.214Z",
+      "factIds": [
+        "fsg-production-handover-f43",
+        "fsg-production-handover-f45"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "e5cfca60-0bb1-4341-ba6e-b83cfc20318b",
+        "at": "2026-11-05T05:44:38.214Z",
+        "durationMs": 1522,
+        "usage": {
+          "prompt_tokens": 1590,
+          "completion_tokens": 197,
+          "total_tokens": 1787
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "9c884cbe-3220-4d2e-a871-fdac7f26cbc0",
+          "at": "2026-11-05T05:44:36.692Z",
+          "durationMs": 806,
+          "usage": {
+            "prompt_tokens": 1112,
+            "completion_tokens": 30,
+            "total_tokens": 1142
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-53",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r4",
+      "text": "审计需要什么凭证，怎么追溯修改？",
+      "at": "2026-11-05T05:44:42.325Z"
+    },
+    {
+      "id": "turn-54",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r4",
+      "text": "审计凭证我按可追溯链来要求：谁查过岗位作业交接包、用的哪个版本、提了什么建议、谁确认，这四类访问记录都要留，不能只留最终摘要 [fsg-production-handover-f45]。修改追溯则要求保留原始版本、修订原因和确认人，练习结束按项目约定删除虚构个人字段 [fsg-production-handover-f43]。也就是说，交接单只写“已完成”在审计侧过不了，必须能还原到版本和确认人。\n\n尚未核实的是：审计凭证的具体字段清单、修改记录的保存载体、追溯查询的权限范围，需要秦芮确认系统能否支撑、唐映秋确认资料责任归属。我的边界是复核环节只核验痕迹完整性，不代替业务方定义审计口径。建议把“修改前后版本可对照、确认人不可为空”列为验收硬条件，这是待验证假设，需顾明岚确认后再定。",
+      "at": "2026-11-05T05:44:42.325Z",
+      "factIds": [
+        "fsg-production-handover-f45",
+        "fsg-production-handover-f43"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "d0dfb098-e801-4c68-8e3a-74f00b10e994",
+        "at": "2026-11-05T05:44:42.325Z",
+        "durationMs": 2266,
+        "usage": {
+          "prompt_tokens": 1813,
+          "completion_tokens": 223,
+          "total_tokens": 2036
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "860555a5-634e-4271-ad0f-e921df47a94c",
+          "at": "2026-11-05T05:44:40.059Z",
+          "durationMs": 409,
+          "usage": {
+            "prompt_tokens": 1335,
+            "completion_tokens": 30,
+            "total_tokens": 1365
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-55",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r5",
+      "text": "跨部门交接有哪些冲突？",
+      "at": "2026-11-05T05:44:48.977Z"
+    },
+    {
+      "id": "turn-56",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r5",
+      "text": "跨团队口径这块，我掌握的具体冲突是：生产协调关注交接速度，质量人员需要保留异常复核窗口 [fsg-production-handover-f50]。这两者不是谁对谁错，而是目标不同——速度口径下“交接单只写已完成”看起来最省事，但复核窗口被压缩后，异常就沉到下游，最后变成客户侧投诉，由我来对外解释。\n\n所以我的立场是先澄清各自目标再谈工具 [fsg-production-handover-f50]，不能拿一个效率指标把复核需求盖过去。对我职责的影响是：口径不统一，我对外反馈和投诉判断就没有稳定依据。\n\n需要你澄清：你说的“冲突”是指目标冲突，还是已经出现了具体的交接争议记录？如果是后者，请给出原始记录和涉及岗位，我才能判断是否进入试点范围；具体名单和批次尚未核实，需和顾明岚、唐映秋对齐。",
+      "at": "2026-11-05T05:44:48.977Z",
+      "factIds": [
+        "fsg-production-handover-f50"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "2eb63eeb-2ad6-4a83-95f2-39e4174d74a3",
+        "at": "2026-11-05T05:44:48.977Z",
+        "durationMs": 2156,
+        "usage": {
+          "prompt_tokens": 1419,
+          "completion_tokens": 213,
+          "total_tokens": 1632
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "aae4c3b7-d48e-48b8-b674-02bf12e7ef50",
+            "at": "2026-11-05T05:44:46.821Z",
+            "durationMs": 1857,
+            "usage": {
+              "prompt_tokens": 1343,
+              "completion_tokens": 173,
+              "total_tokens": 1516
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "2eb63eeb-2ad6-4a83-95f2-39e4174d74a3",
+            "at": "2026-11-05T05:44:48.977Z",
+            "durationMs": 2156,
+            "usage": {
+              "prompt_tokens": 1419,
+              "completion_tokens": 213,
+              "total_tokens": 1632
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "d3e7a518-a6bd-4f44-9618-2195f705fe05",
+          "at": "2026-11-05T05:44:44.964Z",
+          "durationMs": 601,
+          "usage": {
+            "prompt_tokens": 937,
+            "completion_tokens": 14,
+            "total_tokens": 951
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-57",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r5",
+      "text": "试点反馈怎么收集，怎样形成改进闭环？",
+      "at": "2026-11-05T05:44:52.927Z"
+    },
+    {
+      "id": "turn-58",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r5",
+      "text": "反馈收集我建议按周走固定动作：每周把岗位作业交接包的误报、漏报和未确认项汇总，由交接双方共同复盘，不能只改模板就算完，必须核对效果才能结束试点 [fsg-production-handover-f55]。这条是我能对外承诺的闭环节奏，但登记入口走现有投诉渠道还是单开一张表，尚未核实，需要和唐映秋、秦芮对齐。\n\n客户投诉这一侧，先登记原始问题、相关版本和恢复需求，不用模型去推测客户意图 [fsg-production-handover-f54]。这样我对外反馈的口径才稳定，投诉判断也有原始依据。\n\n需要你澄清两点：一是复盘结论由谁签字确认，是交接双方还是质量复核；二是“改进闭环”的验收看确认完整率和返工次数，还是只看误报漏报数量下降。口径不定，我这边没法判断试点能不能收口。具体试点名单和批次尚未核实，需和顾明岚、唐映秋对齐。",
+      "at": "2026-11-05T05:44:52.927Z",
+      "factIds": [
+        "fsg-production-handover-f55",
+        "fsg-production-handover-f54"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "fdc34f89-d545-449a-ac0e-e0898774f590",
+        "at": "2026-11-05T05:44:52.926Z",
+        "durationMs": 2255,
+        "usage": {
+          "prompt_tokens": 1645,
+          "completion_tokens": 242,
+          "total_tokens": 1887
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "6567121a-8c8c-4c68-8d48-cb95576a3f14",
+          "at": "2026-11-05T05:44:50.670Z",
+          "durationMs": 1068,
+          "usage": {
+            "prompt_tokens": 1177,
+            "completion_tokens": 30,
+            "total_tokens": 1207
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-59",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "请聚焦指标口径：没有真实单量时，岗位作业交接包的耗时、返工、频率应如何取样统计？有哪些指标记录可核对？",
+      "at": "2026-11-05T05:46:37.722Z"
+    },
+    {
+      "id": "turn-60",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "指标口径我只能给演练基线，不能当真实经营数据用：模拟4条作业线、160次交接，清单回查6小时，这是虚构样本 [fsg-production-handover-f12]。真实单量我这边尚未核实，不给比例和耗时。\n\n取样上可提待验证假设：按“一次交接”为统计单位，分别记交接单数、清单回查次数与回查耗时、漏记项数、退回人工复核次数；返工按“发现漏记后回查原始版本”计一次，不按人天折算。频率用同一班次内交接单数作分母，避免跨班混算。\n\n可核对的记录：交接单本身、检查项清单版本、原始版本回查痕迹、人工复核标记。但要注意，同事习惯先用群消息处理再补填表格，回填时间不能当作发生时间 [fsg-production-handover-f13]，所以时间类指标只能取人工确认的发生时间，否则先后顺序失真。\n\n这直接影响我负责的异常识别与人工复核：分母和发生时间口径不定，复核结论就不可比。建议先由傅景定审核口径、顾明岚明确试点范围，再定取样周期；否则我无法承诺执行。",
+      "at": "2026-11-05T05:46:37.722Z",
+      "factIds": [
+        "fsg-production-handover-f12",
+        "fsg-production-handover-f13"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "52582f79-ff67-4331-9b37-6f069616b968",
+        "at": "2026-11-05T05:46:37.722Z",
+        "durationMs": 2268,
+        "usage": {
+          "prompt_tokens": 2592,
+          "completion_tokens": 293,
+          "total_tokens": 2885
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b8ce425d-887e-404a-aa93-525e012d3330",
+          "at": "2026-11-05T05:46:35.454Z",
+          "durationMs": 724,
+          "usage": {
+            "prompt_tokens": 2120,
+            "completion_tokens": 46,
+            "total_tokens": 2166
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-61",
+      "speaker": "user",
+      "characterId": "fsg-production-handover-r1",
+      "text": "请聚焦复核与错误处置：你本人在闭环前必须复核什么？交接包错误如何标记、保留原值并转交，哪些具体规则可以确认？",
+      "at": "2026-11-05T05:46:41.239Z"
+    },
+    {
+      "id": "turn-62",
+      "speaker": "character",
+      "characterId": "fsg-production-handover-r1",
+      "text": "闭环前我本人必须复核的，按现场三步走：先确认当班培训材料与工序指引是否同一版本，再逐项比对检查项清单，最后对漏记项回查原始版本判断是哪一版新增的 [fsg-production-handover-f11]。正式闭环前由当班人员核对关键字段，系统建议不能覆盖原值或省略确认 [fsg-production-handover-f14]，所以辅助结果只作提示，与人工核对不一致时以人工核对和原值为准。\n\n错误处置我能确认的规则是：当场标记差异、保留原值不改写、退回人工复核并记录接手人，不自行改判责任归属。夜班用旧清单漏记复核这类情况，必须查原始版本后才能判断责任 [fsg-production-handover-f11]，不能凭回填时间排序。\n\n尚未核实的是：错误分级、谁有权关闭、是否上报，需傅景定审核口径；异常以哪个时间点为准也要一并明确。建议试点前先定“标记—人工复核—关闭”的责任清单，属待验证假设，需顾明岚明确试点范围，否则我无法承诺执行。",
+      "at": "2026-11-05T05:46:41.239Z",
+      "factIds": [
+        "fsg-production-handover-f11",
+        "fsg-production-handover-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "9e74a1f3-d55a-4a64-a9a2-099ea1e8376f",
+        "at": "2026-11-05T05:46:41.239Z",
+        "durationMs": 2079,
+        "usage": {
+          "prompt_tokens": 2600,
+          "completion_tokens": 271,
+          "total_tokens": 2871
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "d27b60cd-3305-4c21-8c91-b5d7ec15c028",
+          "at": "2026-11-05T05:46:39.160Z",
+          "durationMs": 1077,
+          "usage": {
+            "prompt_tokens": 2130,
+            "completion_tokens": 38,
+            "total_tokens": 2168
+          },
+          "attemptCount": 1
+        }
+      }
+    }
+  ],
+  "methodContext": {
+    "buyer": "顾明岚",
+    "operator": "林亦舟"
+  },
+  "framework": "基于 fde-simulation 的 workflow-decomposition、outcome-risk-matrix 与 4-source-convergence 框架进行需求归纳。",
+  "analysis": {
+    "summary": "基于六视角合成访谈与35条已采集事实，可确认的阶段性发现是：岗位作业交接包的核心瓶颈不在工具数量，而在“版本一致性、未结项责任归属、人工复核留痕”三处断点。现场存在培训版本与工序指引不一致、交接单只写“已完成”、夜班沿用旧清单漏记复核等具体现象（f10、f11、f13）；协调侧要求交接必须列明最新版本、未确认事项与截止时间（f23），并以版本有效期加确认状态判定有效版本（f24）；系统侧尚无统一关联编号，仅开放脱敏只读导出（f30、f32）；质量侧要求无法确认版本或关键字段时进入人工队列、不得默认通过（f44），并保留访问与确认痕迹（f45）。业务侧已划定四周、两名骨干、每周不超四小时的试点预算与50次交接验收口径（f03、f02），但授权人员名单、保留期限、过期阈值、指标分母等关键口径尚未核实，故相关假设均标注为待验证，不作为已定规则。",
+    "hypotheses": [
+      {
+        "title": "交接包版本一致性校验是首要切入点",
+        "owner": "交付项目协调员（唐映秋）与数据与系统工程师（秦芮）",
+        "priority": "P0",
+        "reasoning": "现场明确培训版本与工序指引不一致、夜班沿用旧清单漏记复核（f10、f11），协调侧要求交接列明最新版本与未结项（f23），并以版本有效期加确认状态判定有效版本（f24）。系统侧尚无统一关联编号（f30），关键字段含指引版本与培训确认（f31）。因此版本断链是可定位、可验证的瓶颈，但“多久算过期”的阈值未核实。",
+        "nextStep": "在单批次试点内，对50次交接逐条比对指引版本与培训确认字段，记录断链次数与原行；由秦芮确认只读导出能否支撑版本比对，由唐映秋确认版本判定口径，傅景确认复核痕迹要求。",
+        "evidenceIds": [
+          "fsg-production-handover-f10",
+          "fsg-production-handover-f11",
+          "fsg-production-handover-f23",
+          "fsg-production-handover-f24",
+          "fsg-production-handover-f30",
+          "fsg-production-handover-f31"
+        ]
+      },
+      {
+        "title": "未结项与责任归属需独立登记，不能只写已完成",
+        "owner": "服务业务负责人（顾明岚）与交付项目协调员（唐映秋）",
+        "priority": "P0",
+        "reasoning": "交接单只写“已完成”是现场痛点（f10），协调侧要求未确认项不能归到对方名下、跨团队变更需登记责任人（f25），一线可提交但正式确认须由业务负责人完成（f22）。质量侧要求未复核异常保留责任人与状态（f42）。责任链规则有据，但具体确认人名单未核实。",
+        "nextStep": "先由顾明岚书面明确试点范围内的确认人名单，再以未结项跟踪表试跑，统计未确认项是否全部挂责任人；验收看未复核异常是否100%保留责任人与状态。",
+        "evidenceIds": [
+          "fsg-production-handover-f10",
+          "fsg-production-handover-f22",
+          "fsg-production-handover-f25",
+          "fsg-production-handover-f42"
+        ]
+      },
+      {
+        "title": "人工复核兜底规则应作为验收硬条件",
+        "owner": "质量复核负责人（傅景）",
+        "priority": "P0",
+        "reasoning": "质量侧明确版本或关键字段无法确认时进入人工处理队列、必要时暂停试点、不能默认通过（f44），正式结论须授权人员确认（f41），审计需看到谁查过、用哪个版本、谁确认（f45）。现场也要求系统建议不能覆盖原值（f14）。规则方向清晰，但授权人员名单与错误分级未核实。",
+        "nextStep": "由傅景列出人工队列触发条件清单，顾明岚确认授权确认人；在试点中统计进入人工队列的交接数与关闭责任人，验证无默认通过情形。",
+        "evidenceIds": [
+          "fsg-production-handover-f44",
+          "fsg-production-handover-f41",
+          "fsg-production-handover-f45",
+          "fsg-production-handover-f14"
+        ]
+      },
+      {
+        "title": "只读集成与快照兜底可支撑试点，但需先定过期阈值",
+        "owner": "数据与系统工程师（秦芮）",
+        "priority": "P1",
+        "reasoning": "试点仅开放脱敏只读导出，写回与执行接口不开放（f32），读取失败保留上次快照并标记时间、提示人工核查（f35），更新需同时记录业务发生时间与系统接收时间（f34）。能力边界明确，但“多久算过期”的阈值取决于可接受快照时效，尚未核实。",
+        "nextStep": "由秦芮提出快照时效候选值，顾明岚与傅景确认可接受范围；用模拟读取失败场景验证快照标记与人工提示是否留痕。",
+        "evidenceIds": [
+          "fsg-production-handover-f32",
+          "fsg-production-handover-f35",
+          "fsg-production-handover-f34"
+        ]
+      },
+      {
+        "title": "指标口径须多指标并用且以人工确认发生时间为准",
+        "owner": "客户项目负责人（叶书）与外包现场专员（林亦舟）",
+        "priority": "P1",
+        "reasoning": "协作评估既看处理工时也看返工次数与确认完整率，不能用单一效率指标（f51）；现场习惯先群消息后补表，回填时间不能当作发生时间（f13）；演练基线为虚构样本，不代表真实经营数据（f12）。口径方向有据，但分母与取样周期未定。",
+        "nextStep": "由林亦舟按“一次交接”为单位试记交接单数、回查耗时、漏记项与退回复核次数，叶书确认复盘签字方；先跑一周核对口径一致性，再决定是否延长。",
+        "evidenceIds": [
+          "fsg-production-handover-f51",
+          "fsg-production-handover-f13",
+          "fsg-production-handover-f12"
+        ]
+      },
+      {
+        "title": "跨团队目标冲突需先澄清再谈工具",
+        "owner": "客户项目负责人（叶书）与质量复核负责人（傅景）",
+        "priority": "P2",
+        "reasoning": "生产协调关注交接速度、质量人员需保留异常复核窗口（f50），投诉须先登记原始问题与版本、不推测客户意图（f54），每周收集误报漏报并双方复盘（f55）。冲突属目标层而非工具层，但具体争议记录与涉及岗位尚未核实。",
+        "nextStep": "由叶书提供是否存在具体交接争议原始记录；若无，则先以周复盘会澄清双方目标与验收口径，再判断是否纳入试点范围。",
+        "evidenceIds": [
+          "fsg-production-handover-f50",
+          "fsg-production-handover-f54",
+          "fsg-production-handover-f55"
+        ]
+      }
+    ],
+    "followUps": [
+      "顾明岚：试点范围内的业务确认人名单与各角色可批层级是什么？",
+      "傅景：人工处理队列的触发条件清单、错误分级与关闭权限如何界定？",
+      "唐映秋：版本作废与跨团队变更登记的规则维护人、复核周期与升级路径是什么？",
+      "秦芮：只读导出能否支撑版本状态校验？快照可接受时效的候选值是多少？",
+      "叶书：复盘结论由交接双方还是质量复核签字？改进闭环以确认完整率和返工次数为准还是仅看误报漏报下降？",
+      "林亦舟：错误标记后由谁关闭、是否上报？异常以哪个时间点为准？",
+      "顾明岚与唐映秋：原始版本与确认记录的保留期限、删除触发时点与删除审批人是什么？",
+      "叶书：是否存在具体交接争议原始记录与涉及岗位，可否纳入试点范围？"
+    ],
+    "limitations": "本分析仅依据35条已采集合成事实与访谈材料，覆盖率不代表验收通过。演练基线（4条作业线、160次交接、回查6小时）为虚构样本，不代表企业真实经营数据；真实单量、更新频率、保留期限、授权人员名单、过期阈值与指标分母均未采集，相关判断为待验证假设。四类材料仅作为证据来源，未替代六视角收敛；试点范围、预算与验收口径以业务负责人书面确认为准，模型无审批权限。",
+    "audit": {
+      "provider": "DeepSeek",
+      "model": "deepseek-flash",
+      "requestId": "4fccf43c-06cf-43e6-93f1-2989653a0dd0",
+      "at": "2026-11-05T05:46:53.722Z",
+      "durationMs": 11432,
+      "usage": {
+        "prompt_tokens": 7772,
+        "completion_tokens": 1755,
+        "total_tokens": 9527
+      },
+      "attemptCount": 1
+    }
+  },
+  "methodology": {
+    "version": 1,
+    "guide": [
+      {
+        "id": "workflow-decomposition",
+        "name": "业务流程拆解",
+        "file": "frameworks/workflow-decomposition.md",
+        "question": "问题发生在哪一步，为什么要这样划分智能体？",
+        "steps": [
+          "先画人工现状泳道，写出触发、输入、8–15个处理步骤、交接和异常。",
+          "区分判断点与执行点；按使用的数据、权限、模型能力与失败方式组合执行步骤。",
+          "在不可逆动作前设置确定性校验；为低置信、缺资料、冲突和越权安排具名人工接收人。"
+        ],
+        "output": "现状流程 → 失败方式 → 智能体/工具边界 → 校验与人工升级路径"
+      },
+      {
+        "id": "outcome-risk-matrix",
+        "name": "业务结果与不可逆风险矩阵",
+        "file": "frameworks/outcome-risk-matrix.md",
+        "question": "多个需求中，先做哪个最小可验证方案？",
+        "steps": [
+          "列出3–5个候选切入点，分别说明改善的业务结果、现状基线和投入。",
+          "评估失败何时被谁看见、能否在损害前拦截、是否可以撤销；不要把模型置信度等同于业务风险。",
+          "优先选择高价值、可拦截且可恢复的切入点；高风险需硬约束和责任人否决权，价值或风险未知先补证据。"
+        ],
+        "output": "候选方案 → 价值/风险比较 → 选择与暂缓理由 → 验收指标与停止条件"
+      },
+      {
+        "id": "4-source-convergence",
+        "name": "四来源收敛",
+        "file": "frameworks/4-source-convergence.md",
+        "question": "谁说要做，哪里真的坏了，范围允许什么，技术是否可行？",
+        "steps": [
+          "Buyer：核实业务目标、预算、优先级和决定权；Operator：用最近一单还原真实操作和失败位置。",
+          "Brief：核对书面目标、范围、时间和排除项；Industry：寻找可比技术实践，并核实本项目的数据与接口差异。",
+          "检查四个视角是否指向同一瓶颈。分歧保留在问题清单：一线帮助定位故障，决策者确认价值，Brief约束范围，行业证据帮助判断可行性。"
+        ],
+        "output": "四视角陈述与来源 → 收敛/分歧 → 待核实问题 → 有边界的需求假设"
+      }
+    ],
+    "sources": [
+      {
+        "id": "buyer",
+        "name": "Buyer · 业务决策者",
+        "statement": "顾明岚",
+        "evidenceIds": [
+          "fsg-production-handover-f00",
+          "fsg-production-handover-f01",
+          "fsg-production-handover-f04",
+          "fsg-production-handover-f05",
+          "fsg-production-handover-f02",
+          "fsg-production-handover-f03"
+        ],
+        "status": "已采集角色陈述，目标和预算仍待确认"
+      },
+      {
+        "id": "brief",
+        "name": "Brief · 书面需求",
+        "statement": "【合成演练】培训版本与工序指引不一致，交接单只写已完成。请访谈业务、现场、交接、技术、质量与客户六个视角，核实具体问题、证据与试点范围。",
+        "evidenceIds": [],
+        "status": "当前只有场景开场；书面Brief原文与版本待补"
+      },
+      {
+        "id": "industry",
+        "name": "Industry · 行业可行性",
+        "statement": "需要可比技术案例、数据条件和接口能力的核验材料。企业业务介绍不能证明技术可行。",
+        "evidenceIds": [],
+        "status": "待补行业实践与本项目适用性验证"
+      },
+      {
+        "id": "operator",
+        "name": "Operator · 一线使用者",
+        "statement": "林亦舟",
+        "evidenceIds": [
+          "fsg-production-handover-f10",
+          "fsg-production-handover-f11",
+          "fsg-production-handover-f13",
+          "fsg-production-handover-f14",
+          "fsg-production-handover-f12"
+        ],
+        "status": "已采集现场陈述，仍需样本与操作观察核实"
+      }
+    ],
+    "trace": [
+      {
+        "id": "REQ-1",
+        "title": "交接包版本一致性校验是首要切入点",
+        "evidenceIds": [
+          "fsg-production-handover-f10",
+          "fsg-production-handover-f11",
+          "fsg-production-handover-f23",
+          "fsg-production-handover-f24",
+          "fsg-production-handover-f30",
+          "fsg-production-handover-f31"
+        ],
+        "derivation": "现场明确培训版本与工序指引不一致、夜班沿用旧清单漏记复核（f10、f11），协调侧要求交接列明最新版本与未结项（f23），并以版本有效期加确认状态判定有效版本（f24）。系统侧尚无统一关联编号（f30），关键字段含指引版本与培训确认（f31）。因此版本断链是可定位、可验证的瓶颈，但“多久算过期”的阈值未核实。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "在单批次试点内，对50次交接逐条比对指引版本与培训确认字段，记录断链次数与原行；由秦芮确认只读导出能否支撑版本比对，由唐映秋确认版本判定口径，傅景确认复核痕迹要求。"
+      },
+      {
+        "id": "REQ-2",
+        "title": "未结项与责任归属需独立登记，不能只写已完成",
+        "evidenceIds": [
+          "fsg-production-handover-f10",
+          "fsg-production-handover-f22",
+          "fsg-production-handover-f25",
+          "fsg-production-handover-f42"
+        ],
+        "derivation": "交接单只写“已完成”是现场痛点（f10），协调侧要求未确认项不能归到对方名下、跨团队变更需登记责任人（f25），一线可提交但正式确认须由业务负责人完成（f22）。质量侧要求未复核异常保留责任人与状态（f42）。责任链规则有据，但具体确认人名单未核实。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "先由顾明岚书面明确试点范围内的确认人名单，再以未结项跟踪表试跑，统计未确认项是否全部挂责任人；验收看未复核异常是否100%保留责任人与状态。"
+      },
+      {
+        "id": "REQ-3",
+        "title": "人工复核兜底规则应作为验收硬条件",
+        "evidenceIds": [
+          "fsg-production-handover-f44",
+          "fsg-production-handover-f41",
+          "fsg-production-handover-f45",
+          "fsg-production-handover-f14"
+        ],
+        "derivation": "质量侧明确版本或关键字段无法确认时进入人工处理队列、必要时暂停试点、不能默认通过（f44），正式结论须授权人员确认（f41），审计需看到谁查过、用哪个版本、谁确认（f45）。现场也要求系统建议不能覆盖原值（f14）。规则方向清晰，但授权人员名单与错误分级未核实。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "由傅景列出人工队列触发条件清单，顾明岚确认授权确认人；在试点中统计进入人工队列的交接数与关闭责任人，验证无默认通过情形。"
+      },
+      {
+        "id": "REQ-4",
+        "title": "只读集成与快照兜底可支撑试点，但需先定过期阈值",
+        "evidenceIds": [
+          "fsg-production-handover-f32",
+          "fsg-production-handover-f35",
+          "fsg-production-handover-f34"
+        ],
+        "derivation": "试点仅开放脱敏只读导出，写回与执行接口不开放（f32），读取失败保留上次快照并标记时间、提示人工核查（f35），更新需同时记录业务发生时间与系统接收时间（f34）。能力边界明确，但“多久算过期”的阈值取决于可接受快照时效，尚未核实。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "由秦芮提出快照时效候选值，顾明岚与傅景确认可接受范围；用模拟读取失败场景验证快照标记与人工提示是否留痕。"
+      },
+      {
+        "id": "REQ-5",
+        "title": "指标口径须多指标并用且以人工确认发生时间为准",
+        "evidenceIds": [
+          "fsg-production-handover-f51",
+          "fsg-production-handover-f13",
+          "fsg-production-handover-f12"
+        ],
+        "derivation": "协作评估既看处理工时也看返工次数与确认完整率，不能用单一效率指标（f51）；现场习惯先群消息后补表，回填时间不能当作发生时间（f13）；演练基线为虚构样本，不代表真实经营数据（f12）。口径方向有据，但分母与取样周期未定。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "由林亦舟按“一次交接”为单位试记交接单数、回查耗时、漏记项与退回复核次数，叶书确认复盘签字方；先跑一周核对口径一致性，再决定是否延长。"
+      },
+      {
+        "id": "REQ-6",
+        "title": "跨团队目标冲突需先澄清再谈工具",
+        "evidenceIds": [
+          "fsg-production-handover-f50",
+          "fsg-production-handover-f54",
+          "fsg-production-handover-f55"
+        ],
+        "derivation": "生产协调关注交接速度、质量人员需保留异常复核窗口（f50），投诉须先登记原始问题与版本、不推测客户意图（f54），每周收集误报漏报并双方复盘（f55）。冲突属目标层而非工具层，但具体争议记录与涉及岗位尚未核实。",
+        "priority": "P2",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "由叶书提供是否存在具体交接争议原始记录；若无，则先以周复盘会澄清双方目标与验收口径，再判断是否纳入试点范围。"
+      }
+    ],
+    "conclusion": "先从已采集事实形成问题假设，再约定业务结果、范围、失败控制和验收。缺少的来源标记待补，不能把六人访谈完整率当作四来源收敛或需求确认。"
+  },
+  "handoff": {
+    "reportId": "REPORT-b2a26978-d5d4-4274-9ee4-aeef6397e9d5",
+    "version": 2,
+    "sourceStage": "opportunity",
+    "targetStage": "discovery",
+    "href": "/group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114&stage=discovery",
+    "stageHref": "/group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114&stage=opportunity"
+  }
+}

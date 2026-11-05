@@ -1,0 +1,29 @@
+{
+  "scope": "isolated-local-source-rollback",
+  "synthetic": true,
+  "productionRelease": false,
+  "steps": [
+    {
+      "step": "known-good",
+      "at": "2026-11-05T05:52:09.819543+00:00",
+      "source_sha256": "44b71a1018f8a5076487432f043c3b6d73a6713d4a90dc6b2006f27e0e83c80d",
+      "status": "review",
+      "title": "交接核对草稿，待人工复核"
+    },
+    {
+      "step": "injected-bad-release",
+      "at": "2026-11-05T05:52:09.842438+00:00",
+      "source_sha256": "d21516c06bb2ffa11a092e95a819ed39c35c5429828bba1716341b57873b0e95",
+      "status": "manual",
+      "title": "指引未确认或不在有效期"
+    },
+    {
+      "step": "restored-known-good",
+      "at": "2026-11-05T05:52:09.864092+00:00",
+      "source_sha256": "44b71a1018f8a5076487432f043c3b6d73a6713d4a90dc6b2006f27e0e83c80d",
+      "status": "review",
+      "title": "交接核对草稿，待人工复核"
+    }
+  ],
+  "restoredSameHash": true
+}

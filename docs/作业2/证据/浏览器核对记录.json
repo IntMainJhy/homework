@@ -1,0 +1,111 @@
+{
+  "assignment": "FDE课堂作业2",
+  "synthetic": true,
+  "exportedAt": "2026-11-05T05:48:25.137Z",
+  "input": {
+    "scenario": "normal",
+    "mode": "offline",
+    "identity": "operator",
+    "trainingVersion": "v2",
+    "trainingState": "confirmed",
+    "completedItems": [
+      "C01",
+      "C02"
+    ],
+    "receiver": "质量复核员（演示）",
+    "recordId": "HND-DEMO-001",
+    "request": "核对本批次培训版本与检查项，列出缺口、来源与人工接收人。",
+    "moduleId": "fsg-production-handover"
+  },
+  "result": {
+    "projectId": "fsg-production-handover",
+    "recordId": "HND-DEMO-001",
+    "status": "review",
+    "title": "交接核对草稿，待人工复核",
+    "summary": "教学规则已执行；规则通过不代表真实培训合格或生产放行。",
+    "details": [
+      "岗位 JOB-01；工序 PROC-02；批次 BATCH-DEMO-01",
+      "培训与工序指引均为 v2；已按演示确认状态核对",
+      "必查项 C01、C02 均有记录；未结异常 0 项",
+      "交出人：现场专员（演示）；接收人：质量复核员（演示）",
+      "下一步：人工核对原始证据、签署复核记录，再按既有流程处理。"
+    ],
+    "sources": [
+      {
+        "id": "HND-DEMO-001@snapshot-v2",
+        "title": "岗位作业交接包合成快照",
+        "location": "runtime.js#fixture",
+        "version": "snapshot-v2",
+        "capturedAt": "2026-11-05T09:00:00+08:00",
+        "synthetic": true,
+        "excerpt": "{\"id\":\"HND-DEMO-001\",\"job\":\"JOB-01\",\"process\":\"PROC-02\",\"batch\":\"BATCH-DEMO-01\",\"instructionVersion\":\"v2\",\"instructionState\":\"confirmed\",\"validFrom\":\"2026-11-01T00:00:00+08:00\",\"validTo\":\"2026-12-01T00:00:00+08:00\",\"trainingVersion\":\"v2\",\"trainingState\":\"confirmed\",\"requiredItems\":[\"C01\",\"C02\"],\"completedItems\":[\"C01\",\"C02\"],\"owner\":\"现场专员（演示）\",\"receiver\":\"质量复核员（演示）\",\"exceptions\":[],\"sourceVersion\":\"snapshot-v2\",\"capturedAt\":\"2026-11-05T09:00:00+08:00\",\"reviewedAt\":\"2026-11-05T09:05:00+08:00\",\"maxAgeMinutes\":60}",
+        "snapshot": {
+          "id": "HND-DEMO-001",
+          "job": "JOB-01",
+          "process": "PROC-02",
+          "batch": "BATCH-DEMO-01",
+          "instructionVersion": "v2",
+          "instructionState": "confirmed",
+          "validFrom": "2026-11-01T00:00:00+08:00",
+          "validTo": "2026-12-01T00:00:00+08:00",
+          "trainingVersion": "v2",
+          "trainingState": "confirmed",
+          "requiredItems": [
+            "C01",
+            "C02"
+          ],
+          "completedItems": [
+            "C01",
+            "C02"
+          ],
+          "owner": "现场专员（演示）",
+          "receiver": "质量复核员（演示）",
+          "exceptions": [],
+          "sourceVersion": "snapshot-v2",
+          "capturedAt": "2026-11-05T09:00:00+08:00",
+          "reviewedAt": "2026-11-05T09:05:00+08:00",
+          "maxAgeMinutes": 60
+        }
+      }
+    ],
+    "trace": [
+      {
+        "step": 1,
+        "agent": "范围与身份核对",
+        "action": "校验输入契约",
+        "detail": "仅支持本项目合成样本；身份选择不代表真实鉴权。"
+      },
+      {
+        "step": 2,
+        "agent": "版本与完整性核对",
+        "action": "读取合成快照",
+        "detail": "HND-DEMO-001@snapshot-v2；2026-11-05T09:00:00+08:00"
+      },
+      {
+        "step": 3,
+        "agent": "版本与完整性核对",
+        "action": "完成确定性核对",
+        "detail": "版本相等、检查项齐全、确认状态明确、接收人存在、异常无未结项。"
+      },
+      {
+        "step": 4,
+        "agent": "人工交接草稿",
+        "action": "生成复核草稿",
+        "detail": "引用来源版本与采集时间，不修改原始资料。"
+      },
+      {
+        "step": 5,
+        "agent": "人工复核关卡",
+        "action": "等待人工决定",
+        "detail": "仅用合成资料只读核对；不控制设备、不替代安全培训、不批准生产放行。"
+      }
+    ],
+    "mode": "offline-fixture",
+    "ruleVersion": "handover-rules-v2",
+    "writes": 0,
+    "externalSends": 0,
+    "approval": "未获人工批准",
+    "moduleId": "fsg-production-handover",
+    "reviewOwner": "质量复核负责人（待具名授权）"
+  }
+}

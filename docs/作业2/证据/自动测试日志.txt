@@ -1,0 +1,32 @@
+✔ normal (0.424917ms)
+✔ missing (0.079917ms)
+✔ conflict (0.153459ms)
+✔ unconfirmed (0.09575ms)
+✔ missing-item (0.067625ms)
+✔ open-exception (0.045459ms)
+✔ invalid-rule (0.104125ms)
+✔ stale (0.043542ms)
+✔ unauthorized (0.036708ms)
+✔ outage (0.068375ms)
+✔ injection (0.034667ms)
+✔ unknown-record (0.02475ms)
+✔ module-boundary (0.030625ms)
+✔ invalid-identity (0.078292ms)
+✔ unknown-field (0.058833ms)
+✔ bad-items (0.094542ms)
+✔ bad-state (0.029667ms)
+✔ REQ-1: 输入版本确实参与核对，不能只靠场景开关 (0.2145ms)
+✔ REQ-2: 缺失与未确认分开处理 (0.14725ms)
+✔ REQ-3: 未授权不读取快照；任意身份不能充当操作员 (0.055958ms)
+✔ REQ-4: 正常结果含版本、位置、快照时间与人工关卡 (0.102875ms)
+✔ REQ-5: 重复运行确定性一致，原始fixture未覆盖 (0.456042ms)
+✔ REQ-6: 非法数据类型和空任务失败关闭 (0.06425ms)
+✔ REQ-7: 越界自然语言也不能产生写入 (0.075792ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 48.873
