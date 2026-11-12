@@ -1,0 +1,11 @@
+# 依赖由锁文件恢复。
+node_modules/
+# 新验证输出与历史证据分离。
+work-evidence/
+# 本地日志不入库。
+*.log
+# 本地密钥文件不入库。
+.env
+.env.*
+# 保留公开的环境变量示例。
+!.env.example

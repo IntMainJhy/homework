@@ -1,0 +1,40 @@
+# 第一阶段唯一运行配置；所有资料均为合成教学资料。
+server: # 本地 HTTP 服务配置。
+  host: 127.0.0.1 # 仅允许本机访问，禁止扩大监听范围。
+  port: 4180 # 监听端口；修改后需重启。
+  maxBodyBytes: 16384 # 请求体最多 16 KiB。
+  requestTimeoutMs: 10000 # 请求接收超时，单位毫秒。
+project: # 从原 project.json 迁移的项目配置。
+  projectId: fsg-production-handover # 唯一允许的项目。
+  attemptId: 25c1429e-8ed3-4b17-9067-c6f3fcc6d114 # 历史课堂练习编号，不触发联网。
+  assignment: FDE课堂作业2 # 交付名称。
+  trainingHref: /group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114 # 仅存档旧入口。
+  modules: # 当前仅允许一个模块。
+    - id: fsg-production-handover # 模块必须与项目一致。
+      title: 生产岗位培训与工序交接 # 模块名称。
+      company: 上海外服（集团）有限公司 # 合成案例背景，不代表真实授权。
+  pipeline: # 保留原需求追溯配置。
+    projectId: fsg-production-handover # 追溯项目编号。
+    attemptId: 25c1429e-8ed3-4b17-9067-c6f3fcc6d114 # 追溯练习编号。
+    requirements: # 课堂需求清单。
+      - id: REQ-1 # 版本有效性需求。
+        statement: 核对培训与工序指引版本并转人工复核 # 需求描述。
+      - id: REQ-2 # 完整性需求。
+        statement: 识别检查漏项、缺失和未确认状态 # 需求描述。
+      - id: REQ-3 # 只读与追溯需求。
+        statement: 只读输出具名交接清单、来源与执行轨迹 # 需求描述。
+    solution: null # 未伪造正式方案确认。
+    build: null # 未伪造正式构建验收。
+    note: 合成课堂原型；规则通过不代表授权、验收或生产放行。 # 追溯边界。
+access: # 仅为演示白名单，不是真实登录。
+  identity: operator # 唯一允许的演示身份。
+  recordId: HND-DEMO-001 # 唯一允许的合成交接包。
+data: # 数据位置与运行配置分离。
+  fixturePath: data/handover.json # 相对于本文件，只允许 data 目录内的 JSON。
+rules: # 确定性规则及输入上限。
+  version: handover-rules-v3 # 第一阶段规则版本。
+  maxAgeMinutes: 60 # 教学时效假设，不代表真实业务要求。
+  maxRequestLength: 2000 # 任务文字长度上限，不保存任务原文。
+  maxFieldLength: 80 # 版本与接收人字段长度上限。
+  maxItems: 20 # 已记录检查项数量上限。
+  maxItemLength: 40 # 单个检查项编号长度上限。

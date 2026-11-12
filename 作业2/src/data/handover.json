@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "id": "HND-DEMO-001",
+  "job": "JOB-01",
+  "process": "PROC-02",
+  "batch": "BATCH-DEMO-01",
+  "instructionVersion": "v2",
+  "instructionState": "confirmed",
+  "validFrom": "2026-11-01T00:00:00+08:00",
+  "validTo": "2026-12-01T00:00:00+08:00",
+  "trainingVersion": "v2",
+  "trainingState": "confirmed",
+  "requiredItems": ["C01", "C02"],
+  "completedItems": ["C01", "C02"],
+  "owner": "现场专员（演示）",
+  "receiver": "质量复核员（演示）",
+  "exceptions": [],
+  "sourceVersion": "snapshot-v2",
+  "capturedAt": "2026-11-05T09:00:00+08:00",
+  "reviewedAt": "2026-11-05T09:05:00+08:00"
+}

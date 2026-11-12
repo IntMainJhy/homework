@@ -27,28 +27,38 @@ homework/
 
 ## 运行和验证
 
-需要Node.js 22及以上，无需`npm install`，没有模型密钥要求。
+需要 Node.js 22 及以上。第一阶段新增唯一依赖 `yaml@2.9.1`，通过锁文件安装；没有模型密钥要求。
 
 ```sh
-cd 作业2
-node src/server.mjs
-# 打开 http://127.0.0.1:4180
-
-node --test src/demo.test.mjs
-# 重新生成证据时指定输出目录
-node src/verify.mjs ./work-evidence
+npm --prefix 作业2/src ci --ignore-scripts --no-audit --no-fund # 安装锁定依赖。
+npm --prefix 作业2/src start # 打开 http://127.0.0.1:4180。
+npm --prefix 作业2/src test # 另一个终端运行规则与 HTTP 自动测试。
+node 作业2/src/smoke.mjs # 自启临时服务，直接执行 HTTP 验证后关闭。
+node 作业2/src/verify.mjs 作业2/work-evidence/phase1 # 将新证据写入独立目录。
 ```
 
 默认样本`HND-DEMO-001`；演示身份`operator`。将培训版本改为`v1`可触发冲突，将已记录检查项改为`C01`可看到`C02`漏记；选择未授权身份会拒绝读取。正常输入也仅生成待人工复核草稿。运行后可下载核对记录JSON，刷新前请导出页面内历史。
 
 界面包含业务工作台、来源快照、执行轨迹和场景评估。本地服务只监听127.0.0.1；不会连接真实企业系统，不执行设备控制、业务写回、培训审批或生产放行。
 
+## 第一阶段技术栈与开发文档
+
+固定技术栈：Node.js ≥22、原生 JavaScript ESM、HTML/CSS/JavaScript、node:http、node:fs/promises、node:test、node:assert/strict；唯一第三方依赖 yaml 精确锁版。配置入口为 src/config.yaml，合成来源为 src/data/handover.json；原 project.json 已移除，不接模型、数据库或中间件。
+
+- [技术栈与架构](docs/开发文档/技术栈与架构.md)
+- [配置与数据字典](docs/开发文档/配置与数据字典.md)
+- [接口契约与错误码](docs/开发文档/接口契约.md)
+- [安装、运行、自测与故障恢复](docs/开发文档/运行与自测.md)
+- [第一阶段变更文件、验证与风险](docs/开发文档/第一阶段交付.md)
+
+当前自动测试 41 项、独立 HTTP 验证 19 项通过；原 17 场景五轮一致。演示身份不是正式登录，人工意见尚未持久记录；规则通过仍只是待复核草稿。
+
 ## 九阶段成果与证据
 
 - [九阶段27项行动记录](docs/项目交付/九阶段行动记录.md)
 - [需求、数据契约、架构、权限和ROI假设](docs/项目交付/需求与方案.md)
 - [测试、试点、回滚、交接及30/60/90天运营计划](docs/项目交付/验证与交付.md)
-- [评估结果与源码SHA-256](docs/证据/评估结果.json)：Node测试24/24；17个场景重复5轮一致。
+- [历史评估结果与源码SHA-256](docs/证据/评估结果.json)：旧原型 Node 测试 24/24；17 个场景重复 5 轮一致；不是本阶段源码证据。
 - [本地源码回滚演练](docs/证据/本地回滚演练.json)：故障注入后恢复相同哈希。
 - [桌面截图](docs/证据/原型桌面截图.png) / [手机截图](docs/证据/原型手机截图.png)
 
@@ -60,6 +70,6 @@ node src/verify.mjs ./work-evidence
 
 [项目练习](https://fde-discovery-lab-67046.app.workbuddy.host/group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114&stage=opportunity)。课件为用户提供的本地HTML，报告按课件的九阶段与访谈要求整理，未上传课件全文。
 
-界面、预览服务和交互基础来自训练平台“下载可运行源码ZIP”；[平台原包说明](docs/证据/平台源码说明.md)保留来源。作业补充了本场景字段、版本有效期/确认状态/漏项/异常规则、身份白名单、输入契约、JSON导出和可复现验证，移除了不相关项目配置。独立源码未调用LLM，平台角色对话的模型信息保留于[原始访谈导出](docs/证据/平台访谈原始导出.json)。
+界面、预览服务和交互基础来自训练平台“下载可运行源码ZIP”；[平台原包说明](docs/证据/平台源码说明.md)保留来源。作业补充了本场景字段、版本有效期/确认状态/漏项/异常规则、身份白名单、输入契约、JSON导出和可复现验证，移除了不相关项目配置。第一阶段独立源码仍未调用 LLM，现改为由本机服务执行核对；平台角色对话的模型信息保留于[原始访谈导出](docs/证据/平台访谈原始导出.json)。
 
 作业1的原文件及仓库原有README保持原来的位置与内容；本目录只包含作业2。
