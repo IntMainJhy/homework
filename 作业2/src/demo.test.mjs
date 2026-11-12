@@ -104,7 +104,7 @@ test('实际读取故障和畸形来源均降级且无来源泄露', async funct
 }); // 结束降级测试。
 /** 验证配置拒绝；入参无；出参无；无效配置被接受即失败。 */
 test('配置拒绝非本机地址、越界数据路径和非法阈值', function invalidConfiguration() { // 配置不能偷偷扩权限。
-  for (const [section, key, value] of [['server', 'host', '0.0.0.0'], ['data', 'fixturePath', '../README.md'], ['rules', 'maxAgeMinutes', 0], ['server', 'port', '4180'], ['access', 'identity', 'admin']]) { // 常见配置错误。
+  for (const [section, key, value] of [['server', 'host', '0.0.0.0'], ['data', 'fixturePath', '../README.md'], ['rules', 'maxAgeMinutes', 0], ['server', 'port', '4180'], ['access', 'identity', 'admin'], ['review', 'journalPath', 'data/handover.json'], ['review', 'maxEvents', 0]]) { // 常见配置错误。
     const changed = structuredClone(config); changed[section][key] = value; // 修改副本。
     /** 校验非法配置；入参无；出参为异常；必须拒绝。 */
     function rejectConfiguration() { validateConfig(changed); } // 供严格断言调用。

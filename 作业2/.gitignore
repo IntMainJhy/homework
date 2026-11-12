@@ -9,3 +9,6 @@ work-evidence/
 .env.*
 # 保留公开的环境变量示例。
 !.env.example
+
+# 本地人工复核记录及短时锁，不上传 GitHub。
+src/var/

@@ -1,16 +1,21 @@
 import test, { before, after } from 'node:test'; // 原生 HTTP 集成测试。
 import assert from 'node:assert/strict'; // 严格断言。
+import { mkdtemp, rm } from 'node:fs/promises'; // 隔离审计日志，测试不写真实运行目录。
+import { tmpdir } from 'node:os'; // 使用系统临时目录。
+import { join } from 'node:path'; // 组合测试路径。
+import { createReviewStore } from './review.mjs'; // 注入独立复核存储。
 import { once } from 'node:events'; // 等待真实监听事件。
 import { loadConfig, createSnapshotReader } from './config.mjs'; // 唯一配置。
 import { createDemoServer } from './server.mjs'; // 实际服务入口。
 const config = await loadConfig(); // 不使用测试专用运行配置文件。
 const readSource = createSnapshotReader(config); // 真实延迟读取器。
-let reads = 0, server, base; // 统计业务读取与服务生命周期。
+let reads = 0, server, base, directory; // 统计业务读取与服务生命周期。
 /** 统计来源读取；入参无；出参为合成来源；故障向测试抛出。 */
 async function countingReader() { reads += 1; return readSource(); } // 能检测先读取再隐藏来源的错误。
 /** 启动集成服务；入参无；出参为异步完成；监听失败让测试失败。 */
 before(async function startIntegrationServer() { // 随机回环端口避免占用用户配置端口。
-  server = createDemoServer(config, countingReader); // 创建时必须零业务读取。
+  directory = await mkdtemp(join(tmpdir(), 'handover-http-')); // 每次测试使用独立日志。
+  server = createDemoServer(config, countingReader, createReviewStore(config, directory)); // 创建时必须零业务读取。
   assert.equal(reads, 0); // 检查启动无预读。
   const listening = once(server, 'listening'); server.listen(0, config.server.host); await listening; // 端口 0 仅用于隔离测试。
   base = 'http://' + config.server.host + ':' + server.address().port; // 使用真实分配的本机端口。
@@ -20,6 +25,7 @@ after(async function closeIntegrationServer() { // 不留后台测试进程。
   server.closeAllConnections(); // 关闭测试连接。
   /** 等待关闭；入参为完成回调；出参无；由关闭回调完成。 */
   await new Promise(function close(resolveClose) { server.close(resolveClose); }); // 释放随机端口。
+  await rm(directory, { recursive: true, force: true }); // 删除测试日志，不影响用户记录。
 }); // 结束关闭钩子。
 /** 请求实际 API；入参为路径和可选覆盖；出参为状态及统一对象；网络错误抛出。 */
 async function call(path, options = {}) { // 默认只使用演示身份。

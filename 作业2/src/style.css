@@ -12,3 +12,14 @@
 .demo-brand strong,.demo-heading h1,.demo-agent-strip strong{overflow-wrap:anywhere}
 button:disabled{cursor:not-allowed}
 @media(max-width:650px){.demo-metrics{grid-template-columns:1fr}.demo-shell main{padding-inline:14px}.demo-heading h1{font-size:22px}.demo-panel{overflow-x:auto}.demo-sidebar nav{flex-wrap:wrap}}
+
+/* 作业3：沿用工作台，仅补充人工复核控件布局。 */
+.review-picker{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0} /* 列表与加载按钮在窄屏可换行。 */
+.review-picker select{min-width:0;max-width:100%;flex:1;padding:9px;border:1px solid var(--line);border-radius:6px;background:#fff} /* 草稿编号不撑开页面。 */
+.review-picker button,.review-form select{padding:9px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)} /* 使用现有色彩和字体。 */
+.review-form{max-width:720px;margin-top:24px} /* 复核输入保持易读宽度。 */
+.review-form label{display:block;margin:12px 0} /* 原因与确认逐行可读。 */
+.review-form select{display:block;width:100%;margin-top:8px} /* 意见下拉与原表单一致。 */
+.review-form fieldset{border:1px solid var(--line);border-radius:6px;margin:16px 0} /* 将原因选择放在语义分组中。 */
+.review-form input[type="checkbox"]{width:18px;height:18px;vertical-align:middle;accent-color:var(--accent)} /* 保留原生勾选，默认不选。 */
+.demo-panel code,.demo-panel small{overflow-wrap:anywhere} /* 长指纹和意见编号在手机上断行。 */

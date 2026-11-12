@@ -1,13 +1,14 @@
 {
   "name": "fde-fsg-production-handover-agent-demo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test demo.test.mjs server.test.mjs",
+    "test": "node --test demo.test.mjs server.test.mjs review.test.mjs",
     "verify": "node smoke.mjs",
-    "evidence": "node verify.mjs"
+    "evidence": "node verify.mjs",
+    "verify:review": "node review-smoke.mjs"
   },
   "engines": {
     "node": ">=22"

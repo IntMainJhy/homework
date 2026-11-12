@@ -4,6 +4,7 @@ import { resolve } from 'node:path'; // 解析直接运行入口。
 import { pathToFileURL } from 'node:url'; // 比较模块地址。
 import { loadConfig, createSnapshotReader, isObject } from './config.mjs'; // 配置与延迟读取。
 import { accessError, getDemoProduct, runProjectDemo, evaluateProjectDemo, demoScenarios } from './runtime.js'; // 服务端共用规则。
+import { createReviewStore, validateReview, opinions, reasons } from './review.mjs'; // 本地合成意见记录与追溯。
 import { success, failure } from './response.mjs'; // 统一响应。
 const staticFiles = new Map([['/', ['index.html', 'text/html']], ['/index.html', ['index.html', 'text/html']], ['/app.js', ['app.js', 'text/javascript']], ['/style.css', ['style.css', 'text/css']]]); // 不发布配置、数据或服务端源码。
 /** 创建公开错误；入参为状态、错误码和中文信息；出参为 Error；不携带内部原文。 */
@@ -33,8 +34,8 @@ function sendJson(response, status, body) { // 成功和失败使用一致的头
   response.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' }); // 防止缓存来源信息。
   response.end(JSON.stringify(body)); // 仅响应当前本机请求，不执行外部业务发送。
 } // 结束 JSON 发送。
-/** 创建服务；入参为已验证配置和可注入读取器；出参为未监听服务；创建过程不读取业务数据。 */
-export function createDemoServer(config, readSnapshot = createSnapshotReader(config)) { // 测试可统计读取次数。
+/** 创建服务；入参为已验证配置、可注入读取器和本地复核存储；出参为未监听服务；创建过程不读取业务数据。 */
+export function createDemoServer(config, readSnapshot = createSnapshotReader(config), reviewStore = createReviewStore(config)) { // 测试可统计读取次数。
   const context = { config, readSnapshot }; // 不设置全局业务快照。
   const server = http.createServer(handleRequest); // 不引入中间件。
   server.requestTimeout = config.server.requestTimeoutMs; // 请求接收超时。
@@ -66,26 +67,45 @@ export function createDemoServer(config, readSnapshot = createSnapshotReader(con
         response.end(request.method === 'HEAD' ? undefined : content); // 静态资源保留原格式。
         return; // 结束静态响应。
       } // 结束静态分支。
-      if (!['/api/state', '/api/run', '/api/evaluate'].includes(url.pathname)) throw requestError(404, 'NOT_FOUND', '接口或资源不存在'); // 配置、数据和旧 project.json 均不可下载。
-      if (request.method !== (url.pathname === '/api/state' ? 'GET' : 'POST')) throw requestError(405, 'METHOD_NOT_ALLOWED', '请求方法不支持'); // GET 不能执行业务核对。
+      if (!['/api/state', '/api/run', '/api/evaluate', '/api/reviews', '/api/reviews/history'].includes(url.pathname)) throw requestError(404, 'NOT_FOUND', '接口或资源不存在'); // 配置、数据和旧 project.json 均不可下载。
+      const allowedMethods = url.pathname === '/api/reviews' ? ['GET', 'POST'] : url.pathname === '/api/state' ? ['GET'] : ['POST']; // 历史列表只读，提交意见必须 POST。
+      if (!allowedMethods.includes(request.method)) throw requestError(405, 'METHOD_NOT_ALLOWED', '请求方法不支持'); // GET 不能执行业务核对或新增意见。
       if ([...url.searchParams].length) throw requestError(400, 'UNKNOWN_QUERY', '接口不接受查询参数'); // 不保留旧平台参数绕过路径。
+      if (url.pathname === '/api/reviews' && request.method === 'GET') { // 刷新后从本地日志读取历史。
+        authorize(request, config.project.projectId, { identity: request.headers['x-demo-identity'] }); // 访问日志也必须先做权限检查。
+        sendJson(response, 200, success(await reviewStore.list())); // 日志故障不得回退为假空列表。
+        return; // 完成历史列表响应。
+      } // 结束复核列表分支。
       if (url.pathname === '/api/state') { // 初始化表单也读取合成来源。
         authorize(request, config.project.projectId, { identity: request.headers['x-demo-identity'] }); // 必须先通过演示授权。
         let product; // 仅返回必要展示信息。
         try { product = getDemoProduct(config, await readSnapshot()); } catch { throw requestError(503, 'SOURCE_UNAVAILABLE', '合成来源不可用，请检查数据文件'); } // 不用猜测填充表单。
-        sendJson(response, 200, success({ projectId: config.project.projectId, assignment: config.project.assignment, modules: config.project.modules, ruleVersion: config.rules.version, maxAgeMinutes: config.rules.maxAgeMinutes, limits: { request: config.rules.maxRequestLength, field: config.rules.maxFieldLength }, product, scenarios: demoScenarios })); // 不返回完整配置或环境变量。
+        sendJson(response, 200, success({ projectId: config.project.projectId, assignment: config.project.assignment, modules: config.project.modules, ruleVersion: config.rules.version, maxAgeMinutes: config.rules.maxAgeMinutes, limits: { request: config.rules.maxRequestLength, field: config.rules.maxFieldLength }, product, scenarios: demoScenarios, reviewOptions: { opinions, reasons, maxReasons: config.review.maxReasons } })); // 不返回完整配置或环境变量。
         return; // 完成状态响应。
       } // 结束初始化分支。
       const body = await readJson(request, config.server.maxBodyBytes); // 只接受有界 JSON。
       for (const key of Object.keys(body)) if (!['projectId', 'input'].includes(key)) throw requestError(400, 'UNKNOWN_FIELD', '请求包含未定义字段'); // 禁止顶层参数扩展权限。
       if (typeof body.projectId !== 'string' || !isObject(body.input)) throw requestError(400, 'INVALID_INPUT', '需要 projectId 字符串和 input 对象'); // 缺字段不自动赋权。
       authorize(request, body.projectId, body.input); // 在所有业务读取前检查权限。
+      if (url.pathname === '/api/reviews/history') { // 根据服务端草稿编号查询完整意见链。
+        for (const key of Object.keys(body.input)) if (!['identity', 'moduleId', 'recordId', 'draftId'].includes(key)) throw requestError(400, 'UNKNOWN_FIELD', '历史查询包含未定义字段'); // 不允许读任意文件。
+        if (typeof body.input.draftId !== 'string' || !/^[0-9a-f-]{36}$/i.test(body.input.draftId)) throw requestError(400, 'INVALID_REVIEW', '草稿编号无效'); // 不将用户编号拼接为路径。
+        sendJson(response, 200, success(await reviewStore.history(body.input.draftId))); // 返回原始结果、意见版本和链头。
+        return; // 完成历史详情。
+      } // 结束历史详情分支。
+      if (url.pathname === '/api/reviews') { // 明确记录人工提交的意见。
+        const command = validateReview(config, body.input); // 未勾选确认或未知字段时不接触日志。
+        sendJson(response, 200, success(await reviewStore.recordReview(command, readSnapshot))); // 只追加结构化意见，不执行批准。
+        return; // 完成意见响应。
+      } // 结束意见记录分支。
       if (url.pathname === '/api/evaluate') { // 授权调用者才能评估合成场景。
         for (const key of Object.keys(body.input)) if (!['identity', 'moduleId', 'recordId'].includes(key)) throw requestError(400, 'UNKNOWN_FIELD', '评估只接受身份、模块和记录范围'); // 不接受任意评估数据。
         sendJson(response, 200, success(await evaluateProjectDemo(context))); // 返回实际场景结果。
         return; // 完成评估响应。
       } // 结束评估分支。
-      sendJson(response, 200, success(await runProjectDemo(body.projectId, body.input, context))); // 接口成功与 data.status 的业务结论分开。
+      const result = await runProjectDemo(body.projectId, body.input, context); // 保持原有业务状态及只读边界。
+      const tracking = result.sources.length === 1 && ['review', 'manual', 'needs-info'].includes(result.status) ? await reviewStore.recordDraft(result, body.input) : { draftId: null, localAuditWrites: 0 }; // 被拒或无来源结果不能伪造可复核草稿。
+      sendJson(response, 200, success({ ...result, ...tracking })); // 先持久保存再向用户确认草稿可复核。
     } catch (error) { // 错误响应不携带来源。
       if (response.destroyed || response.headersSent) return; // 不重复写头。
       const controlled = Number.isInteger(error.status) && typeof error.code === 'string'; // 仅公开受控异常。

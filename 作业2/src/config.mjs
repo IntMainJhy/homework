@@ -10,10 +10,10 @@ export function isObject(value) { // 数组和空值不能充当契约对象。
 /** 校验配置；入参为解析后的配置对象；出参为原对象；无效时抛出不含配置原文的异常。 */
 export function validateConfig(config) { // 启动前检查，不回退到隐藏默认配置。
   if (!isObject(config)) throw new Error('CONFIG_INVALID：配置必须是对象'); // 空配置停止启动。
-  for (const key of ['server', 'project', 'access', 'data', 'rules']) { // 所有运行配置段均必须存在。
+  for (const key of ['server', 'project', 'access', 'data', 'rules', 'review']) { // 所有运行配置段均必须存在。
     if (!isObject(config[key])) throw new Error('CONFIG_INVALID：缺少配置段'); // 不输出可能含敏感值的配置。
   } // 结束配置段检查。
-  const { server, project, access, data, rules } = config; // 读取已校验的配置段。
+  const { server, project, access, data, rules, review } = config; // 读取已校验的配置段。
   if (server.host !== '127.0.0.1') throw new Error('CONFIG_INVALID：仅允许监听 127.0.0.1'); // 防止演示权限被当成公网鉴权。
   if (!Number.isInteger(server.port) || server.port < 1 || server.port > 65535) throw new Error('CONFIG_INVALID：端口无效'); // 拒绝字符串端口和越界值。
   for (const key of ['maxBodyBytes', 'requestTimeoutMs']) { // 校验 HTTP 限额。
@@ -28,6 +28,10 @@ export function validateConfig(config) { // 启动前检查，不回退到隐藏
   for (const key of ['maxAgeMinutes', 'maxRequestLength', 'maxFieldLength', 'maxItems', 'maxItemLength']) { // 校验规则阈值。
     if (!Number.isSafeInteger(rules[key]) || rules[key] < 1) throw new Error('CONFIG_INVALID：规则阈值无效'); // 错误阈值停止启动。
   } // 结束规则阈值检查。
+  if (typeof review.journalPath !== 'string' || !/^var\/[A-Za-z0-9_-]+\.jsonl$/.test(review.journalPath)) throw new Error('CONFIG_INVALID：复核日志路径无效'); // 审计文件不能覆盖原始资料。
+  for (const key of ['maxJournalBytes', 'maxEvents', 'listLimit', 'maxReasons']) { // 复核容量和字段数量必须明确。
+    if (!Number.isSafeInteger(review[key]) || review[key] < 1) throw new Error('CONFIG_INVALID：复核日志限额无效'); // 不允许无限日志或隐式默认值。
+  } // 结束复核限额检查。
   return config; // 返回验证后的配置，不加载任何业务数据。
 } // 结束配置校验。
 /** 加载唯一 YAML；入参为配置路径（默认模块旁 config.yaml）；出参为已校验对象；失败时抛出固定中文异常。 */

@@ -1,0 +1,77 @@
+{
+  "assignment": "FDE课堂作业3",
+  "phase": 2,
+  "generatedAt": "2026-11-12T07:46:50.968Z",
+  "synthetic": true,
+  "environments": [
+    {
+      "node": "v24.18.0",
+      "platform": "darwin"
+    },
+    {
+      "node": "v22.23.5",
+      "platform": "darwin"
+    }
+  ],
+  "nodeTests": {
+    "passed": 56,
+    "total": 56
+  },
+  "originalHttpChecks": 19,
+  "reviewEndToEnd": {
+    "checked": 12,
+    "restartRecovered": true,
+    "duplicateSuppressed": true,
+    "historyLinked": true,
+    "corruptRejected": true,
+    "sourceUnchanged": true,
+    "writes": 0,
+    "externalSends": 0
+  },
+  "scenarioEvaluation": {
+    "passed": 17,
+    "total": 17,
+    "rounds": 5,
+    "deterministic": true
+  },
+  "sourceHashes": {
+    "config.yaml": "21b7343a89d39b3698cec518e513af76732d61100a48ec3df95bb8df4a005b87",
+    "config.mjs": "a3d208d84ffcbc838b0323df6fe87f7aafdbe8a21c2eadcc3c50880324676462",
+    "response.mjs": "459c18e9832452d9ee585fd184bd4b581bf0a59d8725e67a12cf85e28f896e84",
+    "data/handover.json": "6507afcd5cc91f177f8e72ab8b8c175c3d843e4a4cbc53eedb84542440932497",
+    "runtime.js": "d978f29bd45d915cff3e078cf63d2e6ac4ac74d8129972ba619d11b057d9df8b",
+    "app.js": "64e702d8b505ba23b50687309243f755c3b4fe42a89453c911a1a05ddd846746",
+    "style.css": "911738e4318b59a706fe43aec3dc4bb1ec0122515d8354ad30a0d6b3dfca7d74",
+    "server.mjs": "eb80dcf93a954124bc94c8fa700db3d4aeb1b4b0fab744b6c8affa0b8827d696",
+    "demo.test.mjs": "f4f2fb364661242c18bbc7da546d111caa6be17a58a737b69d5e65502163d4ca",
+    "server.test.mjs": "d17594efd7b226a86eb2978cc0b5e864e17e03646fa701507b37557b0dfd9d14",
+    "smoke.mjs": "602868679deaa34ff17cefd3a92f6c25b158560d78a541643b1111f2df313df2",
+    "package.json": "d744e41b97c2d8e62a49d45c4991d83a1768b1ab678b1382e9453056a9787cdb",
+    "package-lock.json": "ca4993646b15fa4214b601ad678f168a230305d6aabf86b2a827bd222b5c505c",
+    "index.html": "aa3ed83780072babb7b52bacb50f8d1a41032e15551bd228f6c9d320b3e5bb21",
+    "verify.mjs": "6d642d74b3c64d5c005ab99ef0f0ae7135dde5130ef950ee11e986a9a90ed747",
+    "review.mjs": "d7f42b5af951843681c18aa7857275a91b09b3bfcd2a58babccd5d9c1bc4a749",
+    "review.test.mjs": "9e5b59b4f4fd9d934fa774842bbc6b8f853356351c7534bff144acd576c784ab",
+    "review-smoke.mjs": "0e89de778e65d0abfd90ed12e5dddd52e0af5948ba44b9074c3d180c5665b7da"
+  },
+  "browser": {
+    "automation": "ego-browser",
+    "syntheticSimulationOnly": true,
+    "notRealHumanSignature": true,
+    "confirmationInitiallyUnchecked": true,
+    "reloadRecoveredOpinion": true,
+    "confirmationResetAfterReload": true,
+    "twoOpinionsLinked": true,
+    "jsonExportValidated": true,
+    "desktopWidth": 1440,
+    "mobileWidth": 390,
+    "mobileHorizontalOverflow": false,
+    "externalResourceRequests": 0
+  },
+  "limitations": [
+    "演示身份可自报，不是真实登录",
+    "哈希链不是数字签名，不能防本机管理员重写整链",
+    "没有外部可信锚点，不能保证检测重启前整链删除或完整前缀回滚",
+    "仅记录合成意见，不执行生产审批、培训确认或放行"
+  ]
+}

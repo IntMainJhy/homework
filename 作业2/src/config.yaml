@@ -1,4 +1,4 @@
-# 第一阶段唯一运行配置；所有资料均为合成教学资料。
+# 作业3第二阶段唯一运行配置；所有资料均为合成教学资料。
 server: # 本地 HTTP 服务配置。
   host: 127.0.0.1 # 仅允许本机访问，禁止扩大监听范围。
   port: 4180 # 监听端口；修改后需重启。
@@ -7,7 +7,7 @@ server: # 本地 HTTP 服务配置。
 project: # 从原 project.json 迁移的项目配置。
   projectId: fsg-production-handover # 唯一允许的项目。
   attemptId: 25c1429e-8ed3-4b17-9067-c6f3fcc6d114 # 历史课堂练习编号，不触发联网。
-  assignment: FDE课堂作业2 # 交付名称。
+  assignment: FDE课堂作业3 # 交付名称。
   trainingHref: /group-training?project=fsg-production-handover&attemptId=25c1429e-8ed3-4b17-9067-c6f3fcc6d114 # 仅存档旧入口。
   modules: # 当前仅允许一个模块。
     - id: fsg-production-handover # 模块必须与项目一致。
@@ -32,9 +32,15 @@ access: # 仅为演示白名单，不是真实登录。
 data: # 数据位置与运行配置分离。
   fixturePath: data/handover.json # 相对于本文件，只允许 data 目录内的 JSON。
 rules: # 确定性规则及输入上限。
-  version: handover-rules-v3 # 第一阶段规则版本。
+  version: handover-rules-v3 # 业务规则不因记录复核意见而改变。
   maxAgeMinutes: 60 # 教学时效假设，不代表真实业务要求。
   maxRequestLength: 2000 # 任务文字长度上限，不保存任务原文。
   maxFieldLength: 80 # 版本与接收人字段长度上限。
   maxItems: 20 # 已记录检查项数量上限。
   maxItemLength: 40 # 单个检查项编号长度上限。
+review: # 仅保存本地合成草稿与人工意见，不执行业务写回。
+  journalPath: var/review-events.jsonl # 相对 config.yaml；禁止配置到原始 data 目录。
+  maxJournalBytes: 2097152 # 教学日志最大 2 MiB，满额后停止追加。
+  maxEvents: 1000 # 草稿和意见事件合计上限，不自动删除旧记录。
+  listLimit: 50 # 历史列表最多显示最近 50 份草稿。
+  maxReasons: 3 # 一条意见最多三个预定义原因，禁止填写真实个人信息。

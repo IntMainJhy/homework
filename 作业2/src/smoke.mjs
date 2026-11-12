@@ -1,13 +1,17 @@
 import assert from 'node:assert/strict'; // 可直接运行的严格验证脚本。
 import { once } from 'node:events'; // 等待服务真实启动。
-import { readFile } from 'node:fs/promises'; // 核对源文件未被改写。
+import { tmpdir } from 'node:os'; // 验证使用临时日志目录。
+import { join } from 'node:path'; // 组合隔离路径。
+import { createReviewStore } from './review.mjs'; // 复用本地日志而不写用户目录。
+import { readFile, mkdtemp, rm } from 'node:fs/promises'; // 核对源文件未被改写。
 import { createHash } from 'node:crypto'; // 用哈希证明原始 JSON 未变化。
 import { loadConfig } from './config.mjs'; // 使用项目唯一配置。
 import { createDemoServer } from './server.mjs'; // 运行真实 HTTP 服务。
 const config = await loadConfig(); // 无需密钥。
 const source = new URL(config.data.fixturePath, import.meta.url); // 读取仅限合成数据。
 const beforeHash = createHash('sha256').update(await readFile(source)).digest('hex'); // 保存运行前哈希。
-const server = createDemoServer(config); // 仅创建服务，不预读业务样本。
+const directory = await mkdtemp(join(tmpdir(), 'handover-smoke-')); // 验证日志独立存放。
+const server = createDemoServer(config, undefined, createReviewStore(config, directory)); // 仅创建服务，不预读业务样本。
 const listening = once(server, 'listening'); server.listen(0, config.server.host); await listening; // 临时回环端口，不占用日常启动端口。
 const base = 'http://' + config.server.host + ':' + server.address().port; // 所有请求仅到该本机服务。
 let checked = 0; // 动态统计断言场景数。
@@ -41,4 +45,5 @@ try { // 无论断言是否通过都释放服务。
   server.closeAllConnections(); // 关闭所有验证连接。
   /** 等待关闭；入参为完成回调；出参无；关闭后结束脚本。 */
   await new Promise(function close(resolveClose) { server.close(resolveClose); }); // 释放本机端口。
+  await rm(directory, { recursive: true, force: true }); // 不遗留或删除用户的实际复核日志。
 } // 结束验证生命周期。
